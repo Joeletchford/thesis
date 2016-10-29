@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>projection</title>
+    <link rel="stylesheet" href="projection.css" media="screen" title="no title">
+  </head>
+  <body>
+<div class="overlay">
+		<video id="bgvid" playsinline autoplay muted loop>
+		  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+		<source src="/images/Koyaanisqatsi-1982-HD.mp4" type="video/mp4">
+		<!-- <source src="/images/vid.gif" type="video/gif"> -->
+		</video>
+</div>
+  </body>
+  <!--  include socket.io client so we can connect to our server with a websocket easily.-->
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+  <script src="projection.js" charset="utf-8"></script>
+</html>
