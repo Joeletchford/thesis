@@ -13,30 +13,31 @@ body {
 h1 {
     font-family: 'Eczar', serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 10px;
     padding: 0px;
     color: transparent;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
     text-align: center;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 
 img {
     width: 100%;
+		overflow-y: scroll;
 }
 
-.parallax-1 {
+/*.parallax-1 {*/
     /* The image used */
-    background-image: url("images/pata-fuz.gif");
+    /*background-image: url("images/pata-fuz.gif");*/
     /* Set a specific height */
-    min-height: 1200px;
+    /*min-height: 1200px;*/
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    /*background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 
 /*-------------------------------*/
@@ -45,8 +46,8 @@ img {
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 
 html {
-    color: #000;
-    background: #FFF
+    /*color: #000;*/
+    background: white;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -131,10 +132,22 @@ html, body {
     cursor: crosshair;
 }
 
-.front {
-    z-index: 9999;
-}
+.top {
+	z-index: 99999;
+	position: relative}
 
+	.bottom {
+		z-index: 1;
+		 position: relative}
+
+#click{
+	width: 10px; height: 10px;
+	background-color: red;
+	float: right;
+	position: absolute;
+
+	z-index: 99999;
+}
 .hidden {
     display: none;
 }
@@ -167,7 +180,7 @@ body {
 }
 
 .project {
-    margin: auto;
+    /*margin: auto;*/
     top: 50px;
     right: 0;
     bottom: 0;
@@ -177,6 +190,8 @@ body {
     display: none;
     position: absolute !important;
     overflow-y: scroll;
+		    background-color: rgba(233, 233, 233, 0.78);
+				z-index: 0
 }
 
 iframe {
@@ -234,7 +249,7 @@ video {
 .content .project .link a {
     text-decoration: none;
     color: black;
-    background-color: white;
+    background-color: rgba(233, 233, 233, 0.78);
     padding: 20px;
     display: inline-block;
     clear: both;
@@ -288,6 +303,124 @@ video {
 .shown {
     display: block;
 }
+
+
+.article1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.column {
+	 -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    flex: auto;
+    order: 1;
+    width: 400px;
+    float: left;
+		-webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+		column-break-inside: avoid;
+    column-gap: 20px;
+    float: none;
+    margin-left: 30px;
+    margin-bottom: 35px;
+}
+
+.column2 {
+	-webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    float: none;
+    margin-left: 32px;
+    margin-bottom: 250px;
+    flex: auto;
+    order: 2;
+    width: 400px;
+    float: left;
+}
+
+.article .column h2 h3 {}
+
+
+.videoWrapper{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#imgsrc{
+	width: 100%;
+	height: 100vh;
+}
+
+li{
+
+}
+#img1 {
+    background-color: blue;
+}
+
+#img2 {
+
+    background-color: red;
+}
+
+#img3 {
+      background-color: rgba(233, 233, 233, 0.78);
+}
+
+#img4 {
+    background-color: rgba(246, 255, 0, 0.78);
+}
+
+#img5 {
+    background-color: rgba(255, 0, 191, 0.78);
+}
+
+#img6 {
+    background-color: rgba(255, 123, 0, 0.78);
+}
+
+#img7 {
+    background-color: rgba(55, 255, 0, 0.78);
+}
+
+#link1 a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 20px;
+    display: inline-block;
+    clear: both;
+    position: absolute;
+    font-family: "Roadiz Sans";
+    font-size: 12px;
+}
+
+#link1 a:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+    border-right: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+.credit {
+    margin-top: 10px;
+}
+
 
 .about-content {
     cursor: pointer;
@@ -381,83 +514,6 @@ video {
     display: block;
 }
 
-.article1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5%;
-}
-
-.column {
-    flex: auto;
-    order: 1;
-    width: 400px;
-    float: left;
-}
-
-.column2 {
-    flex: auto;
-    order: 2;
-    width: 400px;
-    float: left;
-}
-
-.article .column h2 h3 {}
-
-#img1 {
-    width: 100%;
-    background-color: blue;
-}
-
-#img2 {
-    background-color: red;
-}
-
-#img3 {
-    background-color: green;
-}
-
-#img4 {
-    background-color: yellow;
-}
-
-#img5 {
-    background-color: magenta;
-}
-
-#img6 {
-    background-color: orange;
-}
-
-#img7 {
-    background-color: chartreuse;
-}
-
-#link1 a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 20px;
-    display: inline-block;
-    clear: both;
-    position: absolute;
-    font-family: "Roadiz Sans";
-    font-size: 12px;
-}
-
-#link1 a:hover {
-    text-decoration: none;
-    color: black;
-    opacity: 0.5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
-    border-right: 1px solid rgba(0, 0, 0, 0.37);
-}
-
-.credit {
-    margin-top: 10px;
-}
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /*body, html{
     background-color:red;
@@ -469,7 +525,7 @@ video {
   img{
     width:80%!important;
   }
-  .project{
+  #project{
     display:block !important;
     position:relative !important;
     float:left;

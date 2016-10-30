@@ -68,88 +68,149 @@ $(window).click(function(e) { // on click, so something
 
 
 $(document).ready(
-        function() {
+    function() {
 
-            var element = 0;
-
-
-
-            $(window).click(
-                function() {
-                    // eq = numéro div
-                    // $('.project').eq(0).show();
-                    // $('.project').removeClass('inview');
-                    $('.project').eq(element).addClass('shown');
-                    $('.project').eq(element).addClass('inview');
-                    $('.project').draggable();
-                    $('.about').addClass('shown');
+        var element = 0;
 
 
-                    // allows divs to be placed on click-- X,Y
-                    // $('.project').eq( element ).css('left',_posX + 'px');
-                    // $('.project').eq( element ).css('top',_posY + 'px');
-                    // $('.project').eq( element ).addClass('inview');
 
+        $(window).click(
+            function() {
 
-                    element += 1;
-
-                    var currentImage = $('.project.shown');
-                    if (currentImage.hasClass("video")) {
-                        console.log('vid');
-                        $(".vidplayer").trigger('play');
-                    } else {
-                        $(".vidplayer").trigger('pause');
-                    }
-
-
-                    if (currentImage) {
-	                            $('.project').addClass('front');
-
-	                        }
-
+                var a = 3;
+                // eq = numéro div
+                // $('.project').eq(0).show();
+                // $('.project').removeClass('inview');
+                $('.project').eq(element).addClass('shown').css("z-index", a++);
+                // $('.project').eq(element).addClass('inview');
+                $('.project').draggable({
+                    start: function(event, ui) {
+                        $(this).css("z-index", a++);
 
                     }
-
-                );
-
-                $('.except').click(function(event) {
-                    event.stopPropagation();
                 });
 
-                $('.about-content').click(
-                    function() {
-                        $('.about-box').toggleClass("shown hidden");
-                    }
-                ); $('.about-box').click(
-                    function() {
-                        $('.about-box').addClass('hidden');
-                    }
-                );
+                $('.about').addClass('shown');
+
+                $('project').click(function() {
+                    $(this).addClass('top').removeClass('bottom');
+                    $(this).siblings().removeClass('top').addClass('bottom');
+                    $(this).css("z-index", a++);
+
+                });
+
+                // $('.showSingle').click(function() {
+                //     $('.project').removeClass("top").addClass("bottom");
+                //     var box = $(this).attr('target');
+                //     //alert(box);
+								// 		$('#img'+$(this).attr('target')).removeClass("bottom").addClass("top");
+                //     // $(box).css("z-index", a++);
+                // });
+								// $('.showSingle').click(function(){
+								// 			//  $('.project').hide();
+								// 			$('#img'+$(this).attr('target')).removeClass("top").addClass("bottom");
+								// });
+                // allows divs to be placed on click-- X,Y
+                // $('.project').eq( element ).css('left',_posX + 'px');
+                // $('.project').eq( element ).css('top',_posY + 'px');
+                // $('.project').eq( element ).addClass('inview');
+
+
+                element += 1;
+
+                var currentImage = $('.project.shown');
+                if (currentImage.hasClass("video")) {
+                    console.log('vid');
+                    $(".vidplayer").trigger('play');
+                } else {
+                    $(".vidplayer").trigger('pause');
+                }
+
+
+                // if (currentImage) {
+                //     $('.project').addClass('front');
+                //
+                // }
+
+
+            }
+
+        );
+
+        $('.except').click(function(event) {
+            event.stopPropagation();
+        });
+
+        $('.about-content').click(
+            function() {
+                $('.about-box').toggleClass("shown hidden");
+            }
+        );
+        $('.about-box').click(
+            function() {
+                $('.about-box').addClass('hidden');
+            }
+        );
+
+    //     $("#click").click(function() {
+		// 			$('.project').hide();
+		// 			$('#img'+$(this).attr('target')).show();
+		// });
+    //
+
+				///////// nav hide show buttons
+
+
+        });
 
 
 
-            });
+				$(function(){
+								 $('#showall').click(function(e){
+											 $('.project').show();
+											 if (e == true) {
+												 $('#showall').click(function(){
+												  $('.project').hide();
+												})
 
-        /*
-         * ----------------------------------------------------------------------
-         * POSITION 	of divs
-         * ----------------------------------------------------------------------
-         */
-
-        // var _posX;
-        // var _posY;
-        //
-        // $('body').mousemove(
-        //     function(e) {
-        //         _posX = e.pageX;
-        //         _posY = e.pageY;
-        //         // Position curseur
-        //         $('#curseur').css('left', _posX);
-        //         $('#curseur').css('top', _posY);
-        //     }
-        // );
+											 }
+								});
+								$('.showSingle').click(function() {
+										$('.project').removeClass("top").addClass("bottom");
+										var box = $(this).attr('target');
+										//alert(box);
+										$('#img'+$(this).attr('target')).removeClass("bottom").addClass("top");
+										// $(box).css("z-index", a++);
+								});
+								// $('.showSingle').click(function(){
+								// 			// $('.project').hide();
+								// 			$('#img'+$(this).attr('target')).show();
+								// });
+				});
 
 
-        // ----------------------------------------------------------------------
 
-        // });
+
+/*
+ * ----------------------------------------------------------------------
+ * POSITION 	of divs
+ * ----------------------------------------------------------------------
+ */
+
+// var _posX;
+// var _posY;
+//
+// $('body').mousemove(
+//     function(e) {
+//         _posX = e.pageX;
+//         _posY = e.pageY;
+//         // Position curseur
+//         $('#curseur').css('left', _posX);
+//         $('#curseur').css('top', _posY);
+//     }
+// );
+
+
+// ----------------------------------------------------------------------
+
+// });
