@@ -1,4 +1,4 @@
-var socket = io.connect('http://150.253.89.139:3000') // connect to the server
+var socket = io.connect('http://localhost:3000') // connect to the server
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data) { // when connected, do something
@@ -6,9 +6,10 @@ socket.on('connect', function(data) { // when connected, do something
 })
 
 
+$(window).mousemove(function(e) { // on click, so something
+    // console.log(e) // see the results of the click event.
 
-$(window).click(function(e) { // on click, so something
-    console.log(e) // see the results of the click event.
+
 
     socket.emit('distortMore', true) // send out a message of distortMore to the server, it will handle the details (party planning)!
 
@@ -63,79 +64,65 @@ $(window).click(function(e) { // on click, so something
     }
 }(jQuery);
 
-/*
- */
+
+
+
+
+////////////////
 
 
 $(document).ready(
-    function() {
+			function() {
 
-        var element = 0;
+	        var element = 0;
 
 
 
         $(window).click(
-            function() {
+					(function() {
+						$('#showall').click(function(e) {
+								$('.project,.imgdrag').show();
 
-                var a = 3;
-                // eq = numéro div
-                // $('.project').eq(0).show();
-                // $('.project').removeClass('inview');
-                $('.project').eq(element).addClass('shown').css("z-index", a++);
-                // $('.project').eq(element).addClass('inview');
-                $('.project').draggable({
-                    start: function(event, ui) {
-                        $(this).css("z-index", a++);
+						});
+					})
+				);
+						$(function() {
+    			var a = 3;
+			    	$('.project, .imgdrag').draggable({
+							  axis:"x,y",
+								containment: "body",
+			        start: function(event, ui) {
+			            $(this).css("z-index", a++);
+			        }
+			    });
+			    $('drag div').click(function() {
+			        $(this).addClass('top').removeClass('bottom');
+			        $(this).siblings().removeClass('top').addClass('bottom');
+			        $(this).css("z-index", a++);
 
-                    }
-                });
+			    });
+			    $("a").click(function() {
+			        $(".top").removeClass("top").addClass("bottom");
+			        var box = $(this).attr("href");
+			        //alert(box);
+			        $(box).addClass("top");
+			        $(box).css("z-index", a++);
 
-                $('.about').addClass('shown');
+});
 
-                $('project').click(function() {
-                    $(this).addClass('top').removeClass('bottom');
-                    $(this).siblings().removeClass('top').addClass('bottom');
-                    $(this).css("z-index", a++);
+			    });
 
-                });
+			});
+						// $('.showSingle').click(function() {
+						//     $(this).siblings().addClass("bottom");
 
-                // $('.showSingle').click(function() {
-                //     $('.project').removeClass("top").addClass("bottom");
-                //     var box = $(this).attr('target');
-                //     //alert(box);
-								// 		$('#img'+$(this).attr('target')).removeClass("bottom").addClass("top");
-                //     // $(box).css("z-index", a++);
-                // });
-								// $('.showSingle').click(function(){
-								// 			//  $('.project').hide();
-								// 			$('#img'+$(this).attr('target')).removeClass("top").addClass("bottom");
-								// });
-                // allows divs to be placed on click-- X,Y
-                // $('.project').eq( element ).css('left',_posX + 'px');
-                // $('.project').eq( element ).css('top',_posY + 'px');
-                // $('.project').eq( element ).addClass('inview');
+						//
+						// });
 
-
-                element += 1;
-
-                var currentImage = $('.project.shown');
-                if (currentImage.hasClass("video")) {
-                    console.log('vid');
-                    $(".vidplayer").trigger('play');
-                } else {
-                    $(".vidplayer").trigger('pause');
-                }
+				// });
 
 
-                // if (currentImage) {
-                //     $('.project').addClass('front');
-                //
-                // }
 
-
-            }
-
-        );
 
         $('.except').click(function(event) {
             event.stopPropagation();
@@ -152,41 +139,14 @@ $(document).ready(
             }
         );
 
-    //     $("#click").click(function() {
-		// 			$('.project').hide();
-		// 			$('#img'+$(this).attr('target')).show();
-		// });
-    //
-
-				///////// nav hide show buttons
+        ///////// nav hide show buttons
 
 
-        });
+    // });
 
 
 
-				$(function(){
-								 $('#showall').click(function(e){
-											 $('.project').show();
-											 if (e == true) {
-												 $('#showall').click(function(){
-												  $('.project').hide();
-												})
 
-											 }
-								});
-								$('.showSingle').click(function() {
-										$('.project').removeClass("top").addClass("bottom");
-										var box = $(this).attr('target');
-										//alert(box);
-										$('#img'+$(this).attr('target')).removeClass("bottom").addClass("top");
-										// $(box).css("z-index", a++);
-								});
-								// $('.showSingle').click(function(){
-								// 			// $('.project').hide();
-								// 			$('#img'+$(this).attr('target')).show();
-								// });
-				});
 
 
 
