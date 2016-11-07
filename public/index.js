@@ -1,4 +1,8 @@
-var socket = io.connect('http://localhost:3000') // connect to the server
+// <<<<<<< HEAD
+// var socket = io.connect('http://localhost:3000') // connect to the server
+// =======
+var socket = io.connect() // connect to the server
+// >>>>>>>
 
 // var socket = io.connect('http://localhost:3000') // connect to the server
 
