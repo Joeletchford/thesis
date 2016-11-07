@@ -1,4 +1,8 @@
-var socket = io.connect('http://150.253.89.139:3000') // connect to the server
+var socket = io.connect('http://localhost:3000') // connect to the server
+
+// var socket = io.connect('http://localhost:3000') // connect to the server
+
+
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data) { // when connected, do something
@@ -6,9 +10,10 @@ socket.on('connect', function(data) { // when connected, do something
 })
 
 
+$(window).mousemove(function(e) { // on click, so something
+    // console.log(e) // see the results of the click event.
 
-$(window).click(function(e) { // on click, so something
-    console.log(e) // see the results of the click event.
+
 
     socket.emit('distortMore', true) // send out a message of distortMore to the server, it will handle the details (party planning)!
 
@@ -63,93 +68,118 @@ $(window).click(function(e) { // on click, so something
     }
 }(jQuery);
 
-/*
- */
+
+
+
+
+////////////////
 
 
 $(document).ready(
-        function() {
+			function() {
 
-            var element = 0;
-
-
-
-            $(window).click(
-                function() {
-                    // eq = numéro div
-                    // $('.project').eq(0).show();
-                    // $('.project').removeClass('inview');
-                    $('.project').eq(element).addClass('shown');
-                    $('.project').eq(element).addClass('inview');
-                    $('.project').draggable();
-                    $('.about').addClass('shown');
-
-
-                    // allows divs to be placed on click-- X,Y
-                    // $('.project').eq( element ).css('left',_posX + 'px');
-                    // $('.project').eq( element ).css('top',_posY + 'px');
-                    // $('.project').eq( element ).addClass('inview');
-
-
-                    element += 1;
-
-                    var currentImage = $('.project.shown');
-                    if (currentImage.hasClass("video")) {
-                        console.log('vid');
-                        $(".vidplayer").trigger('play');
-                    } else {
-                        $(".vidplayer").trigger('pause');
-                    }
-
-
-                    if (currentImage) {
-	                            $('.project').addClass('front');
-
-	                        }
-
-
-                    }
-
-                );
-
-                $('.except').click(function(event) {
-                    event.stopPropagation();
-                });
-
-                $('.about-content').click(
-                    function() {
-                        $('.about-box').toggleClass("shown hidden");
-                    }
-                ); $('.about-box').click(
-                    function() {
-                        $('.about-box').addClass('hidden');
-                    }
-                );
+	        var element = 0;
 
 
 
-            });
+        $(window).click(
+					(function() {
+						$('#showall').click(function(e) {
+								$('.project,.imgdrag').show();
 
-        /*
-         * ----------------------------------------------------------------------
-         * POSITION 	of divs
-         * ----------------------------------------------------------------------
-         */
+						});
+					})
+				);
+						$(function() {
+    			var a = 3;
+			    	$('.project, .imgdrag').draggable({
+							  axis:"x,y",
+								containment: "body",
+			        start: function(event, ui) {
+			            $(this).css("z-index", a++);
+			        }
+			    });
+			    $('drag div').click(function() {
+			        $(this).addClass('top').removeClass('bottom');
+			        $(this).siblings().removeClass('top').addClass('bottom');
+			        $(this).css("z-index", a++);
 
-        // var _posX;
-        // var _posY;
-        //
-        // $('body').mousemove(
-        //     function(e) {
-        //         _posX = e.pageX;
-        //         _posY = e.pageY;
-        //         // Position curseur
-        //         $('#curseur').css('left', _posX);
-        //         $('#curseur').css('top', _posY);
-        //     }
-        // );
+			    });
+			    $("a").click(function() {
+			        $(".top").removeClass("top").addClass("bottom");
+			        var box = $(this).attr("href");
+			        //alert(box);
+			        $(box).addClass("top");
+			        $(box).css("z-index", a++);
+
+});
+
+			    });
+
+			});
+						// $('.showSingle').click(function() {
+						//     $(this).siblings().addClass("bottom");
+
+						//
+						// });
+
+				// });
 
 
-        // ----------------------------------------------------------------------
 
-        // });
+
+        $('.except').click(function(event) {
+            event.stopPropagation();
+        });
+
+        $('.about-content').click(
+            function() {
+                $('.about-box').toggleClass("shown hidden");
+            }
+        );
+        $('.about-box').click(
+            function() {
+                $('.about-box').addClass('hidden');
+            }
+        );
+
+        ///////// nav hide show buttons
+
+
+    // });
+
+
+
+
+
+
+
+
+/*
+ * ----------------------------------------------------------------------
+ * POSITION 	of divs
+ * ----------------------------------------------------------------------
+ */
+ $(document).ready(function() {
+
+         $(window).scroll(function(){
+                 if ($(window).scrollTop()){
+
+                 $('.nav').addClass('fixed').css('top','1em').next()
+                 .css('padding-top','0px');
+								 $('.button').addClass('fixed').css('top','1em').next()
+                 .css('padding-top','0px');
+
+                 } else {
+
+                 $('.nav').removeClass('fixed').next()
+                 .css('padding-top','1em');
+								 $('.button').removeClass('fixed').next()
+                 .css('padding-top','1em');
+                 }
+         });
+ });
+
+// ----------------------------------------------------------------------
+
+// });

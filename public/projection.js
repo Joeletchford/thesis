@@ -1,4 +1,7 @@
-var socket = io.connect('http://150.253.89.139:3000') //set up a place for us to connect to, and try to connect.
+var socket = io.connect('http://localhost:3000')
+
+
+// var socket = io.connect('http://localhost:3000') //set up a place for us to connect to, and try to connect.
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data){ // when we are connected do something.
@@ -15,29 +18,49 @@ socket.on('amountToDistort', function(distortionAmount){ // if we see a projecti
 	// 		'filter', 'brightness(' +  distortionAmount + '%)');
 // }
 
+
 if(distortionAmount > 1){
-	$("video").css({
-      filter: 'saturate(' +  distortionAmount * 0.04 + ') blur(' +  distortionAmount * 0.04 + 'px)'
-})
 
-}
+	    //  var filterVal = 'saturate(' +  distortionAmount * 0.01 + ') blur(' +  distortionAmount * 0.01 + 'px)';
 
-});
-
-setTimeout(function(){
+//  stole this off of Stack this morning to play with a new possible approach with the animate function, tried animate before but had nothing work
 
 
-  $( "video" ).animate({
-   filter: saturate(0); blur(0) ,
- }, 5000, function() {  });
-
-    $("video").css({
-      filter: 'saturate(' +  distortionAmount -= 0.04 + ') blur(' +  distortionAmount -= 0.04 + 'px)'
-    })
+			$(".overlay").on('focus',function(){
+			   $(this).animate({width:100,mozTransition:'width 500ms ease-out',webkitTransition:'width 500ms ease-out',transition:'filter ease-out'},0,function(){
+			       $("#navlinks")
+			            .delay(500)
+			            .css({display:'block'});
+			   });
+			});
 
 
 
-}, 1000)
+
+
+// what im working with now
+		   $(".overlay")
+	         .css({'filter': 'saturate(' +  distortionAmount * 0.01 + ') blur(' +  distortionAmount * 0.01 + 'px)'
+				 	});
+				 }
+			 });
+
+
+//
+// setTimeout(function(){
+//
+//
+//  //  $( "video" ).animate({
+//  //   filter: saturate(0), blur(0)
+//  // }, 5000, function() {  });
+//
+//     $(".overlay").css({
+//       filter: 'saturate(' +  distortionAmount -= 0.04 + ') blur(' +  distortionAmount -= 0.04 + 'px)'
+//     })
+//
+//
+//
+// }, 1000)
 
 // .animate({
 //   height: "toggle",

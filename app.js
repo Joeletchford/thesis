@@ -1,8 +1,18 @@
+// "start": "npm run build:watch",
+
+//this is for the package json account to change when using node
+
+
+
+
+
 // var app = require('express')() // use the express js framework to server out html files (handle the request and response on the server)
 var express = require('express');
 var app = express();
 var server = require('http').Server( app ) // start a server instance on a port
 var io = require('socket.io')(server) // use socket.io for real time connections aka. wesockets
+
+// var port = process.env.PORT || 8000
 
 server.listen(3000, function(){ // set up a server on port 3000, do a callback when it started successfully
   console.log("server started on 3000");

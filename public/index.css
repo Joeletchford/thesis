@@ -1,52 +1,11 @@
-    /*------moving circles-------*/
-
-
-/*
-body {
-  background-color: #000000;
-
-	height:auto;
-	width: auto;
-	overflow-x: hidden;
-}*/
-
-h1 {
-    font-family: 'Eczar', serif;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 0px;
-    color: transparent;
-    letter-spacing: .1em;
-    text-align: center;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
-}
-
-img {
-    width: 100%;
-}
-
-.parallax-1 {
-    /* The image used */
-    background-image: url("images/pata-fuz.gif");
-    /* Set a specific height */
-    min-height: 1200px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /*-------------------------------*/
 
 
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 
 html {
-    color: #000;
-    background: #FFF
+    /*color: #000;*/
+    background: white;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -126,13 +85,29 @@ legend {
 /* actual */
 
 html, body {
-    height: 100%;
-    width: 100%;
     cursor: crosshair;
 }
 
-.front {
-    z-index: 9999;
+nav {
+	z-index: 999999;
+	position: relative;
+}
+
+
+.fixed{
+	position: fixed;
+}
+
+.top {
+    z-index: 5;
+    position: absolute;
+		top:0;
+		left: 0;
+}
+
+.bottom {
+    z-index: 1;
+    position: relative
 }
 
 .hidden {
@@ -145,16 +120,29 @@ html, body {
 
 body {
     top: 0;
-    height: 100%;
+    height: 2000px;
     width: 100%;
     right: 0;
     bottom: 0;
     right: 0;
-    position: fixed;
+
     margin: 0px;
     padding: 0px;
     background-color: rgba(233, 233, 233, 0.78);
     /*  background-image: url("../img/back.jpg"); */
+}
+@media screen and (min-width: 300px) and (max-width: 900px) {
+body{ max-width: 300px
+	top: 0;
+	height: 2000px;
+	width: 100vw;
+	right: 0;
+	bottom: 0;
+	right: 0;
+
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(233, 233, 233, 0.78); }
 }
 
 #curseur {
@@ -165,112 +153,36 @@ body {
     left: 0;
     width: 150px;
 }
-
-.project {
-    margin: auto;
+/*
+div is this size of content
+*/
+.imgdrag {
     top: 50px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 80vw;
-    height: 80vh;
-    display: none;
+    display: block;
     position: absolute !important;
-    overflow-y: scroll;
+}
+/*
+div is specific size
+*/
+.project {
+    /*margin: auto;*/
+    top: 50px;
+    width: 500px;
+    height: 100vh;
+    display: block;
+    position: absolute !important;
+}
+
+.img {
+    overflow-y: hidden;
 }
 
 iframe {
     cursor: crosshair;
 }
 
-img {
-    margin: 0 auto;
-    display: block;
-    cursor: crosshair;
-    cursor: grabbing;
-}
-
 video {
     display: block;
-}
-
-.link img {
-    width: 10px;
-    height: 10px;
-    margin: 6px;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-}
-
-.title {
-    height: 10px;
-    margin-left: -130px;
-    margin-bottom: 200px;
-    bottom: 0px;
-    left: 0px;
-    background-color: white;
-    padding: 20px;
-    position: absolute;
-    -ms-transform: rotate(-90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-90deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
-    font-family: 'Interval';
-    font-size: 13px;
-}
-
-.link img:hover {
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.about {
-    display: none;
-    position: absolute;
-}
-
-.content .project .link a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 20px;
-    display: inline-block;
-    clear: both;
-    position: absolute;
-    font-family: "Roadiz Sans";
-    font-size: 12px;
-}
-
-.content .project .link a:hover {
-    text-decoration: none;
-    opacity: 0.5;
-}
-
-.link span {
-    visibility: hidden;
-    position: absolute;
-    background-color: rgb(254, 255, 203);
-    margin: -10px 0 0 -10px;
-    z-index: 1000;
-    padding: 10px;
-    font-size: 11px;
-    font-family: 'Interval';
-}
-
-.link a:hover+span {
-    visibility: visible;
-}
-
-.about a {
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-}
-
-.about img {
-    width: 13px;
 }
 
 .ab {
@@ -284,203 +196,3 @@ video {
     top: 13px;
     height: 14px;
 }
-
-.shown {
-    display: block;
-}
-
-.about-content {
-    cursor: pointer;
-}
-
-.about-box {
-    width: 300px;
-    background-color: white;
-    border: 1px solid black;
-    position: absolute;
-    right: 35px;
-    top: 35px;
-    z-index: 1000;
-    padding: 10px;
-}
-
-.about-title {
-    font-size: 12px;
-    line-height: 140%;
-    font-family: "Roadiz Sans";
-}
-
-.about-mail {
-    font-size: 12px;
-    font-style: italic;
-    line-height: 140%;
-    font-family: "Roadiz Sans";
-    margin-bottom: 10px;
-}
-
-.about-box p {
-    font-size: 12px;
-    line-height: 140%;
-    font-family: "Roadiz Sans";
-}
-
-.about-link {
-    margin-top: 20px;
-}
-
-.about-box a {
-    font-size: 12px;
-    line-height: 140%;
-    font-family: "Roadiz Sans";
-    color: black;
-    text-decoration: none;
-    border-bottom: 1px solid black;
-}
-
-.about-box a:hover {
-    letter-spacing: 2px;
-    font-family: 'Interval';
-}
-
-#cv {
-    float: right;
-    top: 0;
-    right: 0;
-}
-
-.about-link a {
-    font-size: 12px;
-    line-height: 140%;
-    font-family: "Roadiz Sans";
-    color: black;
-    text-decoration: none;
-    border-bottom: 1px solid black;
-}
-
-.about-link a:hover {
-    letter-spacing: 2px;
-    font-family: 'Interval';
-}
-
-.bio-content {
-    margin: 10px;
-}
-
-.bio {
-    width: 500px;
-    display: block;
-    margin-top: 30px;
-}
-
-.bio-about {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    display: block;
-}
-
-.article1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5%;
-}
-
-.column {
-    flex: auto;
-    order: 1;
-    width: 400px;
-    float: left;
-}
-
-.column2 {
-    flex: auto;
-    order: 2;
-    width: 400px;
-    float: left;
-}
-
-.article .column h2 h3 {}
-
-#img1 {
-    width: 100%;
-    background-color: blue;
-}
-
-#img2 {
-    background-color: red;
-}
-
-#img3 {
-    background-color: green;
-}
-
-#img4 {
-    background-color: yellow;
-}
-
-#img5 {
-    background-color: magenta;
-}
-
-#img6 {
-    background-color: orange;
-}
-
-#img7 {
-    background-color: chartreuse;
-}
-
-#link1 a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 20px;
-    display: inline-block;
-    clear: both;
-    position: absolute;
-    font-family: "Roadiz Sans";
-    font-size: 12px;
-}
-
-#link1 a:hover {
-    text-decoration: none;
-    color: black;
-    opacity: 0.5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
-    border-right: 1px solid rgba(0, 0, 0, 0.37);
-}
-
-.credit {
-    margin-top: 10px;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /*body, html{
-    background-color:red;
-    width:100%;
-    height:100%;
-    overflow-y:scroll;
-  }
-
-  img{
-    width:80%!important;
-  }
-  .project{
-    display:block !important;
-    position:relative !important;
-    float:left;
-    width:100%!important;
-  }
-  .video{
-    display:none!important;
-  }
-
-  .hidden{
-    display:block;
-  }
-}*/
-    @media screen and (min-width: 20px) and (max-width: 480px) {}
