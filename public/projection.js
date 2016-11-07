@@ -23,13 +23,13 @@ if(distortionAmount > 1){
 //  stole this off of Stack this morning to play with a new possible approach with the animate function, tried animate before but had nothing work
 
 
-			// $(".overlay").on('focus',function(){
-			//    $(this).animate({width:100,mozTransition:'width 500ms ease-out',webkitTransition:'width 500ms ease-out',transition:'filter ease-out'},0,function(){
-			//        $("#navlinks")
-			//             .delay(500)
-			//             .css({display:'block'});
-			//    });
-			// });
+			$(".overlay").on('focus',function(){
+			   $(this).animate({width:100,mozTransition:'width 500ms ease-out',webkitTransition:'width 500ms ease-out',transition:'filter ease-out'},0,function(){
+			       $("#navlinks")
+			            .delay(500)
+			            .css({display:'block'});
+			   });
+			});
 
 
 

@@ -156,20 +156,25 @@ $(document).ready(
  * POSITION 	of divs
  * ----------------------------------------------------------------------
  */
+ $(document).ready(function() {
 
-// var _posX;
-// var _posY;
-//
-// $('body').mousemove(
-//     function(e) {
-//         _posX = e.pageX;
-//         _posY = e.pageY;
-//         // Position curseur
-//         $('#curseur').css('left', _posX);
-//         $('#curseur').css('top', _posY);
-//     }
-// );
+         $(window).scroll(function(){
+                 if ($(window).scrollTop()){
 
+                 $('.nav').addClass('fixed').css('top','1em').next()
+                 .css('padding-top','0px');
+								 $('.button').addClass('fixed').css('top','1em').next()
+                 .css('padding-top','0px');
+
+                 } else {
+
+                 $('.nav').removeClass('fixed').next()
+                 .css('padding-top','1em');
+								 $('.button').removeClass('fixed').next()
+                 .css('padding-top','1em');
+                 }
+         });
+ });
 
 // ----------------------------------------------------------------------
 

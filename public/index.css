@@ -88,6 +88,16 @@ html, body {
     cursor: crosshair;
 }
 
+nav {
+	z-index: 999999;
+	position: relative;
+}
+
+
+.fixed{
+	position: fixed;
+}
+
 .top {
     z-index: 5;
     position: absolute;
