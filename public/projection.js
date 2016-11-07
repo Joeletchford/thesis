@@ -1,4 +1,7 @@
-var socket = io.connect('http://localhost:3000') //set up a place for us to connect to, and try to connect.
+var socket = io.connect()
+
+
+// var socket = io.connect('http://localhost:3000') //set up a place for us to connect to, and try to connect.
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data){ // when we are connected do something.
