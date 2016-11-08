@@ -1,28 +1,20 @@
-// <<<<<<< HEAD
-// var socket = io.connect('http://localhost:3000') // connect to the server
-// =======
-var socket = io.connect() // connect to the server
-// >>>>>>>
+
+var socket = io.connect('http://localhost:3002') // connect to
+// var socket = io.connect()
 
 // var socket = io.connect('http://localhost:3000') // connect to the server
-
-
-var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
 })
 
-
-$(window).mousemove(function(e) { // on click, so something
-    // console.log(e) // see the results of the click event.
-
-
-
-    socket.emit('distortMore', true) // send out a message of distortMore to the server, it will handle the details (party planning)!
-
-
+$(window).mousemove(function(e) {
+    socket.emit('distortMore', true)
 })
+
+$(window).notmousemove(100, function() {
+    socket.emit('distortLess', true);
+});
 
 
 /*
