@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://localhost:3002') // connect to
+var socket = io.connect('http://localhost:3005') // connect to
 // var socket = io.connect()
 
 // var socket = io.connect('http://localhost:3000') // connect to the server
@@ -12,9 +12,16 @@ $(window).mousemove(function(e) {
     socket.emit('distortMore', true)
 })
 
-$(window).notmousemove(100, function() {
-    socket.emit('distortLess', true);
-});
+
+ $(window).notmousemove(100, function(){
+	socket.emit('distortLess', true)
+})
+
+
+//
+// $(window).notmousemove(100, function() {
+// 	  socket.emit('distortLess', true);
+// });
 
 
 /*
@@ -124,29 +131,6 @@ $(document).ready(
 
 
 
-        $('.except').click(function(event) {
-            event.stopPropagation();
-        });
-
-        $('.about-content').click(
-            function() {
-                $('.about-box').toggleClass("shown hidden");
-            }
-        );
-        $('.about-box').click(
-            function() {
-                $('.about-box').addClass('hidden');
-            }
-        );
-
-        ///////// nav hide show buttons
-
-
-    // });
-
-
-
-
 
 
 
@@ -156,26 +140,44 @@ $(document).ready(
  * POSITION 	of divs
  * ----------------------------------------------------------------------
  */
- $(document).ready(function() {
-
-         $(window).scroll(function(){
-                 if ($(window).scrollTop()){
-
-                 $('.nav').addClass('fixed').css('top','1em').next()
-                 .css('padding-top','0px');
-								 $('.button').addClass('fixed').css('top','1em').next()
-                 .css('padding-top','0px');
-
-                 } else {
-
-                 $('.nav').removeClass('fixed').next()
-                 .css('padding-top','1em');
-								 $('.button').removeClass('fixed').next()
-                 .css('padding-top','1em');
-                 }
-         });
- });
+ // $(document).ready(function() {
+ //
+ //         $(window).scroll(function(){
+ //                 if ($(window).scrollTop()){
+ //
+ //                 $('.nav').addClass('fixed').css('padding-top','1em').next()
+ //                 .css('padding-top','1em');
+ // 							 $('.button').addClass('fixed').css('paddging-top','1em').next()
+ //                 .css('padding-top','1em');
+ //
+ //                 } else {
+ //
+ //                 $('.nav').removeClass('fixed').next()
+ //                 .css('padding-top','1em');
+ // 							 $('.button').removeClass('fixed').next()
+ //                 .css('padding-top','1em');
+ //                 }
+ //         });
+ // });
 
 // ----------------------------------------------------------------------
 
 // });
+
+
+function toggle_visibility(id) {
+	var e = document.getElementById(id);
+	if(e.style.display == 'block')
+		e.style.display = 'none';
+		else
+		e.style.display = 'block';
+}
+
+
+
+/*
+ * ----------------------------------------------------------------------
+ * type and form button and id show show
+
+ * ----------------------------------------------------------------------
+ */

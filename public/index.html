@@ -1,72 +1,109 @@
-
 <!DOCTYPE html>
 <html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>
-		EFF<=LESS
-	</title>
-	<meta name="author" content="">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/tachyons.css">
-	<link rel="stylesheet" href="index.css" media="screen" title="no title"><link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		EFF
+		<=LESS </title>
+			<meta name="author" content="">
+			<meta name="description" content="">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="/css/tachyons.css">
+			<link rel="stylesheet" href="/css/index.css" media="screen" title="no title">
+			<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+			<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 
 </head>
 
 <style media="screen"></style>
-<body>
-<!-- navywavy -->
 
-<nav class ="nav left-1 top-1 absolute ">
+<body>
+	<!-- navywavy -->
+
+	<nav class="nav left-1 absolute ">
 		<ul class="list ">
-<a  href="#showall" class="link blue hover-orange underline-hover">All</a>
-<a  href="#img1" class="link blue hover-orange underline-hover">1</a>
-<a  href="#img2" class="link blue hover-orange underline-hover">2</a>
-<a  href="#img3" class="link blue hover-orange underline-hover">3</a>
-<a  href="#img4" class="link blue hover-orange underline-hover">4</a>
-<a  href="#img5" class="link blue hover-orange underline-hover">5</a>
-<a  href="#img6" class="link blue hover-orange underline-hover">6</a>
-<a  href="#img7" class="link blue hover-orange underline-hover">7</a>
-<a  href="#img8"class="link blue hover-orange underline-hover">8</a>
-			</nav>
-			<div class="button top-1 right-1 absolute link ">
-				<button class=" bn bg-transparent link blue hover-orange underline-hover" onClick="history.go(0)" VALUE="EFF<=LESS">
+			<a href="#showall" class="link blue hover-orange underline-hover">All</a>
+			<a href="#img1" class="link blue hover-orange underline-hover">1</a>
+			<a href="#img2" class="link blue hover-orange underline-hover">2</a>
+			<a href="#img3" class="link blue hover-orange underline-hover">3</a>
+			<a href="#img4" class="link blue hover-orange underline-hover">4</a>
+			<a href="#img5" class="link blue hover-orange underline-hover">5</a>
+			<a href="#img6" class="link blue hover-orange underline-hover">6</a>
+			<a href="#img7" class="link blue hover-orange underline-hover">7</a>
+			<a href="#img8" class="link blue hover-orange underline-hover">8</a>
+	</nav>
+	<div class="button right-1 absolute link ">
+		<button class=" bn bg-transparent link blue hover-orange underline-hover" onClick="history.go(0)" VALUE="EFF<=LESS">
 				<p>
 					refresh
 				</p>
 			</button>
-			</div>
-			<!-- content  -->
-
-
-<div class="drag">
-	<div id="img1" class="imgdrag z-0 ">
-		<img class="img" src="images/fuzz-space-3.gif" />
 	</div>
-	<div id="img2" class="imgdrag bg-red z-0 ">
-		<h1 class="f2 f-6-ns "  >
+
+	<header class="button right-1 site-header">
+		<dic onclick="toggle_visibility('about-overlay');" class="site-title link blue hover-orange underline-hover bg-transparent" href="#">poop</div>
+	</header>
+	<!-- content  -->
+
+	<div class="about-wrapper">
+		<div class="about-overlay" id="about-overlay">
+			<div class="form">
+				<div class="internal-form">
+					<div onclick="toggle_visibility('about-overlay');" class="about-overlay-title right-1 "><a class="text"href="#">back</a></div>
+
+					<div id="f1" class="scroll-form">
+
+					</div>
+					<div id="f2" class="scroll-form">
+
+					</div>
+					<div id="f3" class="scroll-form">
+
+					</div>
+					</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div id="content" class="drag">
+		<div id="img1" class="imgdrag z-0 ">
+			<img class="img" src="images/fuzz-space-nb-2.gif" />
+		</div>
+		<div id="img2" class="imgdrag bg-red z-0 ">
+			<h1 class="f2 f-6-ns ">
 			Effort = Effortless
 		</h1>
+		</div>
+		<div id="img1" class="imgdrag z-0 ">
+			<img class="img" src="images/fuzz-space.gif" />
+		</div>
+		<div id="img3" class="imgdrag z-0 ">
+			<img class="img" src="images/fuzz-space-2.gif" />
+		</div>
+		<div id="img4" class="imgdrag z-0 ">
+			<img class="img" src="images/fuzz-space-4.gif" />
+		</div>
+		<div id="img5" class="imgdrag z-0 ">
+			<img class="img" src="images/pata-fuz.gif" />
+		</div>
 	</div>
-	<div id="img1" class="imgdrag z-0 ">
-		<img class="img" src="images/fuzz-space.gif" />
-	</div>
-	<div id="img3" class="imgdrag z-0 ">
-		<img class="img" src="images/fuzz-space-2.gif" />
-	</div>
-	<div id="img4" class="imgdrag z-0 ">
-		<img class="img" src="images/fuzz-space-4.gif" />
-	</div>
-	<div id="img5" class="imgdrag z-0 ">
-		<img class="img" src="images/pata-fuz.gif" />
-	</div>
-</div>
+
+
+
+
+
 </body>
+
+
+
+
 
 <!-- the end -->
 <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
@@ -74,7 +111,7 @@
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="notmousemove.js" charset="utf-8"></script>
-<script src="index.js" charset="utf-8"></script>
+<script src="/js/notmousemove.js" charset="utf-8"></script>
+<script src="/js/index.js" charset="utf-8"></script>
 
 </html>
