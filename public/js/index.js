@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://localhost:3005') // connect to
+var socket = io.connect('http://localhost:3004') // connect to
 
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id

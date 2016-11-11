@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:3005')
+var socket = io.connect('http://localhost:3004')
   //
   // var socket = io.connect()
 
@@ -22,7 +22,7 @@ socket.on('amountToDistort', function(distortionAmount) { // if we see a project
         'filter': 'saturate(' + distortionAmount * 0.01 + ') blur(' + distortionAmount * 0.01 + 'px)'
       });
   }
-});
+},100);
 
 
 

@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var server = require('http').Server( app ) // start a server instance on a port
 var io = require('socket.io')(server) // use socket.io for real time connections aka. wesockets
-var port = 3005;
+var port = 3004;
 
 var timers = require('timers');
 
