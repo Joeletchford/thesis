@@ -101,13 +101,11 @@ nav {
 .top {
     z-index: 5;
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .bottom {
     z-index: 1;
-    position: relative
+	    position: relative;
 }
 
 .hidden {
@@ -270,35 +268,9 @@ video {
 }
 
 
-/*click color and type*/
-
-/*#mainpage nav h1 {
-    font-family: 'ABeeZee', 'Trebuchet MS', Arial, sans-serif;
-    font-size: 2.85em;
-    line-height: 1.3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 11px;
-}*/
-
 #navigation {
     list-style: none;
 }
-
-/*#navigation li {
-    display: block;
-    margin-bottom: 2px;
-    font-size: 1.4em;
-    font-weight: bold;
-}*/
-/*
-#navigation li a {
-    display: block;
-    padding: 8px 6px;
-    width: 100%;
-    color: #d1e0f8;
-    text-decoration: none;
-}*/
 
 #content {
     display: block;
@@ -313,6 +285,12 @@ video {
 
 
 /* right navigation */
+about-type{
+
+	color: white;
+}
+
+
 
 #aboutright {
 	background-color: black;
@@ -333,6 +311,6 @@ video {
 nav#right {
     position: absolute;
     min-height: 100%;
-    right: 0;
+    right: 1em;
     margin-top: 50vh;
 }

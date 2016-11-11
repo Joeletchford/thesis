@@ -110,6 +110,7 @@ $(document).ready(
 			    });
 			    $("a").click(function() {
 			        $(".top").removeClass("top").addClass("bottom");
+
 			        var box = $(this).attr("href");
 			        //alert(box);
 			        $(box).addClass("top");
@@ -120,55 +121,3 @@ $(document).ready(
 			    });
 
 			});
-						// $('.showSingle').click(function() {
-						//     $(this).siblings().addClass("bottom");
-
-						//
-						// });
-
-				// });
-
-
-
-
-
-
-
-
-/*
- * ----------------------------------------------------------------------
- * POSITION 	of divs
- * ----------------------------------------------------------------------
- */
- // $(document).ready(function() {
- //
- //         $(window).scroll(function(){
- //                 if ($(window).scrollTop()){
- //
- //                 $('.nav').addClass('fixed').css('padding-top','1em').next()
- //                 .css('padding-top','1em');
- // 							 $('.button').addClass('fixed').css('paddging-top','1em').next()
- //                 .css('padding-top','1em');
- //
- //                 } else {
- //
- //                 $('.nav').removeClass('fixed').next()
- //                 .css('padding-top','1em');
- // 							 $('.button').removeClass('fixed').next()
- //                 .css('padding-top','1em');
- //                 }
- //         });
- // });
-
-// ----------------------------------------------------------------------
-
-// });
-
-
-// function toggle_visibility(id) {
-// 	var e = document.getElementById(id);
-// 	if(e.style.display == 'none')
-// 		e.style.display = 'block';
-// 		if(e.style.display = 'block')
-// 		e.style.display = 'none';
-// }
