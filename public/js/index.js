@@ -1,28 +1,13 @@
 
 var socket = io.connect('http://localhost:3005') // connect to
-// var socket = io.connect()
-
-// var socket = io.connect('http://localhost:3000') // connect to the server
 
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
 })
 
-$(window).mousemove(function(e) {
+$(window).mousemove(_.throttle(function(e) {
     socket.emit('distortMore', true)
-})
-
-
- $(window).notmousemove(100, function(){
-	socket.emit('distortLess', true)
-})
-
-
-//
-// $(window).notmousemove(100, function() {
-// 	  socket.emit('distortLess', true);
-// });
-
+}, 100));
 
 /*
  * ----------------------------------------------------------------------
