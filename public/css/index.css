@@ -89,20 +89,20 @@ html, body {
 }
 
 nav {
-	z-index: 999999;
-	position: relative;
-	padding-top: 1em;
+    z-index: 999999;
+    position: relative;
+    padding-top: 1em;
 }
 
-.fixed{
-	position: fixed;
+.fixed {
+    position: fixed;
 }
 
 .top {
     z-index: 5;
     position: absolute;
-		top:0;
-		left: 0;
+    top: 0;
+    left: 0;
 }
 
 .bottom {
@@ -125,24 +125,24 @@ body {
     right: 0;
     bottom: 0;
     right: 0;
-
     margin: 0px;
     padding: 0px;
     background-color: rgba(233, 233, 233, 0.78);
     /*  background-image: url("../img/back.jpg"); */
 }
-@media screen and (min-width: 300px) and (max-width: 900px) {
-body{ max-width: 300px
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-	right: 0;
-	bottom: 0;
-	right: 0;
 
-	margin: 0px;
-	padding: 0px;
-	background-color: rgba(233, 233, 233, 0.78); }
+@media screen and (min-width: 300px) and (max-width: 900px) {
+    body {
+        max-width: 300px top: 0;
+        height: 100vh;
+        width: 100vw;
+        right: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgba(233, 233, 233, 0.78);
+    }
 }
 
 #curseur {
@@ -153,18 +153,23 @@ body{ max-width: 300px
     left: 0;
     width: 150px;
 }
+
+
 /*
 div is this size of content
 */
-.imgdrag {
 
+.imgdrag {
     top: 50px;
     display: block;
     position: absolute !important;
 }
+
+
 /*
 div is specific size
 */
+
 .project {
     /*margin: auto;*/
     top: 50px;
@@ -175,7 +180,7 @@ div is specific size
 }
 
 .img {
-	width: 500px;
+    width: 500px;
     overflow-y: hidden;
 }
 
@@ -202,114 +207,132 @@ video {
 
 /* page slider */
 
-
-
-
-.form{
-	overflow: hidden;
-    height: 100vh;
-	position: relative;
-	width: 100vw;
-
-
-	background-color: black;
-	color: white;
-}
-.internal-form{
-	height: 100vh;
-	width: 100vw;
-	overflow-y: scroll;
-
-}
-
-#f1{
-	height:500px;
-	 width:100%;
-	 position:fixed;
-	 top:0;
-	 left:0;
-	 background:#ff0;
-	 z-index:500;
-}
-#f2{
-	height:500px;
-	 width:100%;
-	 margin-top: 500px;
-	 position:relative;
-	 top:0;
-	 left:0;
-	 background:red;
-	 z-index:600;
-}
-#f3{
-	height:100px;
-	 width:100%;
-	 position:relative;
-	 top:1000px;
-	 left:0;
-	 background:blue;
-	 z-index:700;
-}
-
-
-/* Text Styles, Colors, Backgrounds */
-
-.nav{
-	position: fixed;
-	padding-top: 1em;
-}
-
-.button{
-	position: fixed;
-	padding-top: 1em;
-}
-
-
-
-.site-header {
-	margin-top: 50vh;
-	float: right;
+#f1 {
+    height: 500px;
+    width: 100%;
     position: fixed;
-		z-index: 99999;
-}
-.site-header a{
-		text-decoration: none;
-	}
-
-.about-overlay {
-	padding-top:-1em;
-	display: none;
-    }
-
-.about-overlay-title{
-	position: absolute;
-	z-index:99999999;
-}
-.about-wrapper {
-
-  position: fixed;
-  z-index: 9999999;
-
-  height: 105%;
+    top: 0;
+    left: 0;
+    background: #ff0;
+    z-index: 500;
 }
 
+#f2 {
+    height: 500px;
+    width: 100%;
+    margin-top: 500px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: red;
+    z-index: 600;
+}
 
-.text {
-	float: right;
-	font-family: serif;
-	font-style: italic;
-	font-size: 2em;
-	border-bottom: 2px solid #000;
-	text-decoration: none;
-	color: black;
-	-webkit-transition: 0.2s ease-in-out;
-	-moz-transition: 0.2s ease-in-out;
-	-o-transition: 0.2s ease-in-out;
-	-ms-transition: 0.2s ease-in-out;
-	transition: 0.2s ease-in-out;
-	-webkit-transition: .2s all;
-	transition: .2s all
+#f3 {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 1000px;
+    left: 0;
+    background: blue;
+    z-index: 700;
+}
+
+#about {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
 
 
+/*cover page with drag elements*/
 
-	/*scroller */
+#mainpage {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: black;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+
+/*clivk button*/
+
+#mainpage nav {
+    position: absolute;
+    min-height: 100%;
+}
+
+
+/*click color and type*/
+
+/*#mainpage nav h1 {
+    font-family: 'ABeeZee', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 2.85em;
+    line-height: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+}*/
+
+#navigation {
+    list-style: none;
+}
+
+/*#navigation li {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1.4em;
+    font-weight: bold;
+}*/
+/*
+#navigation li a {
+    display: block;
+    padding: 8px 6px;
+    width: 100%;
+    color: #d1e0f8;
+    text-decoration: none;
+}*/
+
+#content {
+    display: block;
+    margin-left: 200px;
+    padding: 10px 15px;
+}
+
+#content p {
+    color: #fff;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.7);
+}
+
+
+/* right navigation */
+
+#aboutright {
+	background-color: black;
+    display: block;
+    width: 100vw;
+    padding: 1em;
+    padding-top: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+#closebtn{
+	margin-top: 50vh;
+}
+
+nav#right {
+    position: absolute;
+    min-height: 100%;
+    right: 0;
+    margin-top: 50vh;
+}

@@ -165,19 +165,10 @@ $(document).ready(
 // });
 
 
-function toggle_visibility(id) {
-	var e = document.getElementById(id);
-	if(e.style.display == 'block')
-		e.style.display = 'none';
-		else
-		e.style.display = 'block';
-}
-
-
-
-/*
- * ----------------------------------------------------------------------
- * type and form button and id show show
-
- * ----------------------------------------------------------------------
- */
+// function toggle_visibility(id) {
+// 	var e = document.getElementById(id);
+// 	if(e.style.display == 'none')
+// 		e.style.display = 'block';
+// 		if(e.style.display = 'block')
+// 		e.style.display = 'none';
+// }
