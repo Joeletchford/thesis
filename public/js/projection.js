@@ -1,5 +1,11 @@
-var socket = io.connect('http://localhost:3004')
-  //
+// video src https://vimeo.com/154586454
+
+
+
+
+
+var socket = io.connect('http://10.5.32.145:8080')
+  //8080, "10.5.32.145"
   // var socket = io.connect()
 
 
@@ -8,7 +14,7 @@ var socket = io.connect('http://localhost:3004')
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data) { // when we are connected do something.
-  console.log("connected to the server" + socket.id); // log out our socket's id, some long garbled number letter thing that is unique!
+  console.log("connected to the server" + socket.id); // log out our socket's id, some long garbled number letter tcching that is unique!
 
 })
 
@@ -22,7 +28,7 @@ socket.on('amountToDistort', function(distortionAmount) { // if we see a project
         'filter': 'saturate(' + distortionAmount * 0.01 + ') blur(' + distortionAmount * 0.01 + 'px)'
       });
   }
-},100);
+});
 
 
 

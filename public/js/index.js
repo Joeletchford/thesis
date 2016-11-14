@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://localhost:3004') // connect to
+var socket = io.connect('http://10.5.32.145:8080') // connect to
 
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
@@ -7,7 +7,7 @@ socket.on('connect', function(data) { // when connected, do something
 
 $(window).mousemove(_.throttle(function(e) {
     socket.emit('distortMore', true)
-}, 100));
+}));
 
 /*
  * ----------------------------------------------------------------------
