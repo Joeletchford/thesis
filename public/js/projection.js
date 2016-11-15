@@ -1,9 +1,5 @@
 // video src https://vimeo.com/154586454
 
-
-
-
-
 var socket = io.connect('http://10.5.32.145:8080')
   //8080, "10.5.32.145"
   // var socket = io.connect()
@@ -25,10 +21,10 @@ socket.on('amountToDistort', function(distortionAmount) { // if we see a project
     // what im working with now
     $(".overlay")
       .css({
-        'filter': 'saturate(' + distortionAmount * 0.01 + ') blur(' + distortionAmount * 0.01 + 'px)'
+        'filter': 'saturate(' + distortionAmount * 0.03 + ') blur(' + distortionAmount * 0.01 + 'px)'
       });
   }
-});
+},200);
 
 
 

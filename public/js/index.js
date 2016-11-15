@@ -7,7 +7,7 @@ socket.on('connect', function(data) { // when connected, do something
 
 $(window).mousemove(_.throttle(function(e) {
     socket.emit('distortMore', true)
-}));
+},200));
 
 /*
  * ----------------------------------------------------------------------
