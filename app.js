@@ -20,7 +20,7 @@ io.on('connection', function(socket) { // if socket.io sees a new connection, do
 
   socket.on('distortMore', function(data) {
 
-    distortionAmount = distortionAmount + 10
+    distortionAmount = distortionAmount + 9
     io.emit('amountToDistort', distortionAmount);
     console.log('more', distortionAmount);
 
@@ -38,5 +38,5 @@ function distortLess() {
       console.log('🐈 Interval cleared!')
       clearInterval(interval);
     }
-  },500);
+  },600);
 }

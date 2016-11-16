@@ -288,6 +288,8 @@ video {
 		height: 100%;
 			width: 100vw;
 				overflow-x: scroll;
+				overflow-y: scroll; /* has to be scroll, not auto */
+-webkit-overflow-scrolling: touch;
 }
 
 #closebtn{
@@ -295,6 +297,7 @@ video {
 	left: 1em;
 	float: left;
 	position: fixed;
+	  z-index: 2;
 }
 
 nav#right {

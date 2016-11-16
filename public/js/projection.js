@@ -21,7 +21,7 @@ socket.on('amountToDistort', function(distortionAmount) { // if we see a project
     // what im working with now
     $(".overlay")
       .css({
-        'filter': 'saturate(' + distortionAmount * 0.03 + ') blur(' + distortionAmount * 0.01 + 'px)'
+        'filter': 'saturate(' + distortionAmount * 0.01 + ') blur(' + distortionAmount * 0.03 + 'px)'
       });
   }
 },200);
