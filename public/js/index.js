@@ -1,13 +1,33 @@
-
-var socket = io.connect('http://10.5.32.145:8080') // connect to
+var socket = io.connect('http://10.5.32.159:8080') // connect to
 
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
 })
+var sound = new Howl({
+  urls: ['images/forest.mp3']
+});
+
+var sound2 = new Howl({
+  urls: ['images/white.mp3']
+});
 
 $(window).mousemove(_.throttle(function(e) {
-    socket.emit('distortMore', true)
+    socket.emit('distortMore', true);
+		timeout = setInterval(function() {
+				console.log('Mouse idle...');
+				clearInterval(timeout);
+////this is where you put the code to do things...
+				sound.play();
+				// sound2.play();
+		}, 200);
 }));
+
+$(document).mouseNotMoving(200,function(){
+  console.log("mouse not moving...")
+	sound2.play();
+})
+
+
 
 /*
  * ----------------------------------------------------------------------
@@ -64,45 +84,78 @@ $(window).mousemove(_.throttle(function(e) {
 
 
 $(document).ready(
-			function() {
+    function() {
 
-	        var element = 0;
+        var element = 0;
 
 
 
         $(window).click(
-					(function() {
-						$('#showall').click(function(e) {
-								$('.project,.imgdrag').show();
+            (function() {
+                $('#showall').click(function(e) {
+                    $('.project,.imgdrag').show();
 
-						});
-					})
-				);
-						$(function() {
-    			var a = 3;
-			    	$('.project, .imgdrag').draggable({
-							  axis:"x,y",
-								containment: "body",
-			        start: function(event, ui) {
-			            $(this).css("z-index", a++);
-			        }
-			    });
-			    $('drag div').click(function() {
-			        $(this).addClass('top').removeClass('bottom');
-			        $(this).siblings().removeClass('top').addClass('bottom');
-			        $(this).css("z-index", a++);
+                });
+            })
+        );
+        $(function() {
+            var a = 3;
+            $('.project, .imgdrag').draggable({
+                axis: "x,y",
+                containment: "body",
+                start: function(event, ui) {
+                    $(this).css("z-index", a++);
+                }
+            });
+            $('drag div').click(function() {
+                $(this).addClass('top').removeClass('bottom');
+                $(this).siblings().removeClass('top').addClass('bottom');
+                $(this).css("z-index", a++);
 
-			    });
-			    $("a").click(function() {
-			        $(".top").removeClass("top").addClass("bottom");
+            });
+            $("a").click(function() {
+                $(".top").removeClass("top").addClass("bottom");
 
-			        var box = $(this).attr("href");
-			        //alert(box);
-			        $(box).addClass("top");
-			        $(box).css("z-index", a++);
+                var box = $(this).attr("href");
+                //alert(box);
+                $(box).addClass("top");
+                $(box).css("z-index", a++);
 
-});
+            });
 
-			    });
+        });
 
-			});
+    });
+//
+// Sounds
+//
+
+// $(document).on('mousemove', function() {
+//     clearInterval(timeout);
+//     timeout = setInterval(function() {
+//         console.log('Mouse idle...');
+// ////this is where you put the code to do things...
+// 				sound.play();
+// 				// sound2.play();
+//     }, 200); //rate of interval
+// });
+
+
+
+// // +~+~+~+~+~ raw jQ/jS +~+~+~+~+~~+
+// var timeout = null;
+// $(document).on('mousemove', function() {
+//     clearInterval(timeout);
+//     timeout = setInterval(function() {
+//         console.log('Mouse idle...');
+//         //this is where you put the code to do things...
+//     }, 200); //rate of interval
+// });
+//
+//
+//
+//
+// //how to use the jQuery plugin.
+// $(document).mouseNotMoving(200,function(){
+//   console.log("mouse not moving...")
+// })

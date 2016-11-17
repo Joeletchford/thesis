@@ -1,6 +1,6 @@
 // video src https://vimeo.com/154586454
 
-var socket = io.connect('http://10.5.32.145:8080')
+var socket = io.connect('http://10.5.32.159:8080')
   //8080, "10.5.32.145"
   // var socket = io.connect()
 
