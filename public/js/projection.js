@@ -1,9 +1,12 @@
 // video src https://vimeo.com/154586454
 
-var socket = io.connect('http://10.5.32.159:8080')
+var socket = io.connect('http://150.253.88.217:8080')
   //8080, "10.5.32.145"
   // var socket = io.connect()
 
+function map(n, start1, stop1, start2, stop2) {
+    return ((n-start1)/(stop1-start1))*(stop2-start2)+start2;
+  };
 
 
 // var socket = io.connect('http://localhost:3000') //set up a place for us to connect to, and try to connect.
@@ -28,35 +31,22 @@ socket.on('amountToDistort', function(distortionAmount) { // if we see a project
 
 
 
-//
-// setTimeout(function(){
-//
-//
-//  //  $( "video" ).animate({
-//  //   filter: saturate(0), blur(0)
-//  // }, 5000, function() {  });
-//
-//     $(".overlay").css({
-//       filter: 'saturate(' +  distortionAmount -= 0.04 + ') blur(' +  distortionAmount -= 0.04 + 'px)'
-//     })
-//
-//
-//
-// }, 1000)
+socket.on('amountToDistort', function(distortionAmount) { // if we see a projectionRectangle message then do some stuff
+  console.log(distortionAmount) //see the coordinates come down.
 
-// .animate({
-//   height: "toggle",
-//   opacity: "toggle"
-// }, {
-//   duration: "slow"
-// });
+  if (distortionAmount > 0) {
+
+    var sound1 = document.getElementById("audio1");
+    var sound2 = document.getElementById("audio2");
 
 
-// setTimeout(function (){
-//
-// 		$("video").css({ "filter": "ease-in-out"});
-// });
+    var s1vol = map(distortionAmount,0,1500,0.0,1.0)
+    var s2vol = map(distortionAmount,0,1500,1.0,0.0)
 
-// setTimeout(function(){
-//   window.location.reload();
-// }, 1 * 60000);
+    sound1.volume = s1vol;
+    sound2.volume = s2vol;
+
+
+
+};
+})
