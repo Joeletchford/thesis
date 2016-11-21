@@ -3,31 +3,10 @@ var socket = io.connect('http://10.5.32.159:8080') // connect to
 socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
 })
-var sound = new Howl({
-  urls: ['images/forest.mp3']
-});
-
-var sound2 = new Howl({
-  urls: ['images/white.mp3']
-});
 
 $(window).mousemove(_.throttle(function(e) {
-    socket.emit('distortMore', true);
-		timeout = setInterval(function() {
-				console.log('Mouse idle...');
-				clearInterval(timeout);
-////this is where you put the code to do things...
-				sound.play();
-				// sound2.play();
-		}, 200);
+    socket.emit('distortMore', true)
 }));
-
-$(document).mouseNotMoving(200,function(){
-  console.log("mouse not moving...")
-	sound2.play();
-})
-
-
 
 /*
  * ----------------------------------------------------------------------
@@ -100,7 +79,7 @@ $(document).ready(
         );
         $(function() {
             var a = 3;
-            $('.project, .imgdrag').draggable({
+            $('.project, .imgdrag, .imgdrag2').draggable({
                 axis: "x,y",
                 containment: "body",
                 start: function(event, ui) {
@@ -129,7 +108,13 @@ $(document).ready(
 //
 // Sounds
 //
-
+// var sound = new Howl({
+//   urls: ['images/forest.mp3']
+// });
+//
+// var sound2 = new Howl({
+//   urls: ['images/white.mp3']
+// });
 // $(document).on('mousemove', function() {
 //     clearInterval(timeout);
 //     timeout = setInterval(function() {
@@ -138,7 +123,30 @@ $(document).ready(
 // 				sound.play();
 // 				// sound2.play();
 //     }, 200); //rate of interval
+// });''
+// $(document).on('mousemove', function(){
+//  sound.play();
+//  sound2.play();
 // });
+
+// $('#off').click(function() {
+//   sound.pause();
+//   sound2.pause();
+// })
+//
+// var timer;
+// $(document).mousemove(function() {
+//     if (timer) {
+//         clearTimeout(timer);
+//         timer = 0;
+//     }
+//
+//     $('#audio1:visible').fadeIn();
+//     timer = setTimeout(function() {
+//         $('#audio1').fadeOut()
+//     }, 200)
+// })
+//
 
 
 
