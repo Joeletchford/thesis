@@ -309,7 +309,7 @@ nav#right {
 
 /* new page blockcss */
 #mainpage2 {
-	overflow-y: scroll;
+
     width: 100%;
     height: 100vh;
     display: flex;
@@ -317,7 +317,7 @@ nav#right {
 		flex-wrap: wrap;
 		align-content: flex-start;
 		background-color: #000;
-    
+    overflow: hidden;
     position: relative;
     z-index: 2;
 }
@@ -401,4 +401,17 @@ nav#right {
 	position: absolute;
 		width: 5550px;
 
+}
+#mainpage3 {
+	overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		background-color: #000;
+
+    position: relative;
+    z-index: 2;
 }
