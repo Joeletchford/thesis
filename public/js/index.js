@@ -1,32 +1,45 @@
+
+
+
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://150.253.88.217:8080')
+  var socket = io.connect('http://10.5.32.133:8080')
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
   })
+ var sd1 = $("#audio1")[0];
+  var sd2 = $("#audio2")[0];
 
   $(window).mousemove(_.throttle(function(e) {
     socket.emit('distortMore', true)
   }));
-
   // sound
+
+
   socket.on('amountToDistort', function(distortionAmount) {
-    // if we see a projectionRectangle message then do some stuff
-    console.log(distortionAmount) //see the coordinates come down.
+
+    console.log(distortionAmount)
+
     if (distortionAmount > 0) {
+
+
       var sound1 = document.getElementById("audio1");
       var sound2 = document.getElementById("audio2");
-      var s2vol = volMap(distortionAmount, 0, 1500, 0.0, 1.0)
-      var s1vol = volMap(distortionAmount, 0, 1500, 1.0, 0.0)
+
+      var s2vol = map(distortionAmount, 0, 1500, 0.0, 1.0)
+      var s1vol = map(distortionAmount, 0, 1500, 1.0, 0.0)
       sound2.volume = s2vol;
       sound1.volume = s1vol;
-    };
+
+		};
   });
 
-  function volMap(n, start1, stop1, start2, stop2) {
+  function map(n, start1, stop1, start2, stop2) {
     return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
   };
+
+
 
   // other event listeners
   var element = 0;
@@ -62,3 +75,9 @@ $(document).ready(function() {
   });
 
 });
+
+
+
+
+
+// this is  where im attempting to creat an on load sond element
