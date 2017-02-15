@@ -86,42 +86,11 @@ $(document).ready(function() {
 
 
 jQuery(document).ready(function( $ ) {
-// Instituut JS
 
+  var images = new Array('images/1.png', 'images/2.png', 'images/3.png', 'images/4.png', 'images/5.png', 'images/6.png', 'images/7.png', 'images/8.png', 'images/9.png', 'images/11.png', 'images/12.png', 'images/13.png', 'images/14.png', 'images/15.png', 'images/16.png', 'images/17.png', 'images/18.png', 'images/19.png', 'images/20.png'
+);
 
-	/*
-	* Basic Count Up from Date and Time
-	* Author: @mrwigster / trulycode.com
-	*/
-/*
-	window.onload=function() {
-	  // Month,Day,Year,Hour,Minute,Second
-	  upTime('jun,01,2016,18:30:00'); // ****** Change this line!
-	}
-	function upTime(countTo) {
-	  now = new Date();
-	  countTo = new Date(countTo);
-	  difference = (now-countTo);
-
-	  days=Math.floor(difference/(60*60*1000*24)*1);
-	  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-	  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-	  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
-
-	  document.getElementById('days').firstChild.nodeValue = days;
-	  document.getElementById('hours').firstChild.nodeValue = hours;
-	  document.getElementById('minutes').firstChild.nodeValue = mins;
-	  document.getElementById('seconds').firstChild.nodeValue = secs;
-
-	  clearTimeout(upTime.to);
-	  upTime.to=setTimeout(function(){ upTime(countTo); },1000);
-	}
-*/
-
-
-  var images = new Array('images/blueridge.gif', 'images/james.gif', 'images/cityrva.gif', 'images/nrg1.gif', 'images/nrg.gif', 'images/city.gif', 'images/camp.gif', 'images/nrg1.gif', 'images/blueridge.gif', 'images/blueridge.gif');
-	 var _milliseconds = 100;
-   var _second = _milliseconds * 60;
+	var _second = 1000;
    var _minute = _second * 60;
    var _hour = _minute * 60;
    var _day = _hour * 24;
@@ -129,7 +98,7 @@ jQuery(document).ready(function( $ ) {
    var interval = setInterval(function()
    {
        var date = new Date();
-       var end = new Date('12/26/2017 7:30 PM');
+       var end = new Date('05/14/2017 7:30 PM');
        var distance = (end - date);
 
     if (distance < 0) {
@@ -139,7 +108,7 @@ jQuery(document).ready(function( $ ) {
        var hourz = String(Math.floor(distance/_hour));
        var minutes = String(Math.floor((distance%_hour)/_minute));
        var seconds = String(Math.floor((distance%_minute)/_second));
-			 var mili = String(Math.floor((distance%_second)/_milliseconds));
+			//  var mili = String(Math.floor((distance%_second)/_milliseconds));
 
    if(hourz < 100)
       {
@@ -170,8 +139,8 @@ jQuery(document).ready(function( $ ) {
       }
       else
       {
-          $('#minute1').attr('src', images[minutes.charAt(0)]);
-          $('#minute2').attr('src', images[minutes.charAt(1)]);
+          $('#minute1').attr('src', images[minutes.charAt(1)]);
+          $('#minute2').attr('src', images[minutes.charAt(2)]);
       }
 
        if(seconds < 10)
@@ -184,17 +153,7 @@ jQuery(document).ready(function( $ ) {
           $('#second1').attr('src', images[seconds.charAt(0)]);
           $('#second2').attr('src', images[seconds.charAt(1)]);
       }
-			if(mili < 10)
-		 {
-				 $('#mili1').attr('src', images[0]);
-				 $('#mili2').attr('src', images[mili.charAt(0)]);
-		 }
-		 else
-		 {
-				 $('#mili1').attr('src', images[mili.charAt(0)]);
-				 $('#mili2').attr('src', images[mili.charAt(1)]);
-		 }
-	 })
+	 },1000)
 
 
 
