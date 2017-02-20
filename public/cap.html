@@ -19,6 +19,8 @@
 			<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.0-beta13/howler.min.js"></script>
 
+			<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
 			<style>
 				#map {
 					height: 100%;
@@ -53,13 +55,41 @@
 		</div>
 	</div>
 
-	<div class="map-type garamond">
+	<div class="map-type-left">
+<span class="type">
+		<p class="phrase">Our <span class="type-italic">[western]</span> society has taught us</p>
+</span>
+		</div>
 
-		<p class="phrase">Our [western] society has taught us</p>
+
+			<div class="map-type-left left contain">
+				<span class="type">
 		<p class="phrase-2"> to understand that knowing is </p>
+		</span>
+			</div>
+
+
+	<div class="map-type-right">
+		<span class="type type-italic">
 		<p class="phrase-3"> the only way to be viewed as having knowledge.</p>
-		<p class="phrase-4"> Not-knowing is viewed as having less knowledge and therefor less in the eyes of society.
-		</p>
+	</font>
+	</span>
+	</div>
+
+	<div class="map-type-left left top contain">
+		<span class="type type-italic">
+			<p class="phrase-4"> Not-knowing is viewed as having less knowledge—
+			</p>
+	</font>
+	</span>
+	</div>
+
+	<div class="map-type-right top ">
+		<span class="type type-italic">
+			<p class="phrase-5"> therefor less in the eyes of society.
+			</p>
+	</font>
+	</span>
 	</div>
 
 
@@ -67,18 +97,68 @@
 	<script>
 		function initPano() {
 
-			// Note: constructed panorama objects have visible: true
-			// set by default.
-			var panorama = new google.maps.StreetViewPanorama(
-				document.getElementById('map'), {
-					position: {
+			var places = [
+				{position: {
 						lat: 37.7300591,
 						lng: -119.6375416
+					},disableDefaultUI: true,},
+				{
+					position: {
+						lat: 42.7732289,
+						lng: -92.1204449
 					},
 					disableDefaultUI: true,
 
-				});
+				},
+				{
+					position: {
+						lat: 54.4597989,
+						lng: -3.1646489
+					},
+					disableDefaultUI: true,
+
+				},
+				{
+					position: {
+						lat: 22.2309088,
+						lng: 113.8590323
+					},
+					disableDefaultUI: true,
+
+				},
+				{
+					position: {
+						lat: 79.5408462,
+						lng: 12.4673236
+					},
+					disableDefaultUI: true,
+
+				}
+
+			]
+
+			var choosePlace = Math.floor(Math.random() * places.length);
+			console.log(choosePlace);
+			console.log(places[choosePlace]);
+
+			// Note: constructed panorama objects have visible: true
+			// set by default.
+			var panorama = new google.maps.StreetViewPanorama(
+				document.getElementById('map'), places[choosePlace]);
 		}
+
+		// 	// Note: constructed panorama objects have visible: true
+		// 	// set by default.
+		// 	var panorama = new google.maps.StreetViewPanorama(
+		// 		document.getElementById('map'), {
+		// 			position: {
+		// 				lat: 37.7300591,
+		// 				lng: -119.6375416
+		// 			},
+		// 			disableDefaultUI: true,
+		//
+		// 		});
+		// }
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYsMASUe2zdAwpHS2wsb90GPycvCVYOHE&callback=initPano">
 	</script>

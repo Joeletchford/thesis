@@ -1,34 +1,62 @@
+/*font-family: 'Droid Serif', serif;*/
 
-
-.map-type{
-
-	width: 100%;
-	z-index: 10;
-	padding: 10px;
-	position: absolute;
-	/*-webkit-column-count: 3*/
-}
-
-.map-type p{
-	font-weight: lighter;
-		font-size: 2em;
-		text-transform: uppercase;
+.map-type-left{
 		color: white;
+		font-size: 4.5vw;
+    left: 14px;
+    line-height: .9em;
+    position: fixed;
+		z-index: 99999;
+		pointer-events: none;
+		display:inline;
+		font-weight: lighter;
 }
-
+.map-type-right{
+		color: white;
+		font-size: 4.5vw;
+    right: 14px;
+    line-height: .9em;
+    position: fixed;
+		z-index: 99999;
+		pointer-events: none;
+		display:inline;
+    text-align: right;
+			font-weight: lighter;
+}
+.contain{
+	width:600px;
+}
+.left{
+	left: 520px;
+}
+.top{
+	top:520px;
+}
+.type{
+	font-family: sans-serif;
+	pointer-events: none;
+}
+.type-italic{
+	   font-style: italic;
+		 pointer-events: none;
+}
 .phrase {
+width: 400px
 
 }
 
 .phrase-2 {
-	float: right;
-	right: 10px;
+width: 400px
+left: 430px;
 }
 
 .phrase-3 {
-top: 40px;
+width: 800px
 }
 
 .phrase-4 {
 
+}
+.phrase-5{
+	width: 600px
 }
