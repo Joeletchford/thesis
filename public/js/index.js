@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://10.5.32.175:8080')
+  var socket = io.connect('http://10.5.32.180:8080')
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
@@ -14,8 +14,9 @@ $(document).ready(function() {
   $(window).mousemove(_.throttle(function(e) {
     socket.emit('distortMore', true)
   }));
-  // sound
 
+
+  // sound
 
   socket.on('amountToDistort', function(distortionAmount) {
 
@@ -48,7 +49,6 @@ $(document).ready(function() {
   $(window).click((function() {
     $('#showall').click(function(e) {
       $('.project,.imgdrag').show();
-
     });
   }));
 
@@ -73,7 +73,6 @@ $(document).ready(function() {
     $(box).addClass("top");
     $(box).css("z-index", a++);
   });
-
 });
 
 
@@ -90,70 +89,6 @@ jQuery(document).ready(function( $ ) {
   var images = new Array('images/1.png', 'images/2.png', 'images/3.png', 'images/4.png', 'images/5.png', 'images/6.png', 'images/7.png', 'images/8.png', 'images/9.png', 'images/10.png','images/11.png', 'images/12.png', 'images/13.png', 'images/14.png', 'images/15.png', 'images/16.png', 'images/17.png', 'images/18.png', 'images/19.png', 'images/20.png'
 );
 
-	// var _second = 1000;
-  //  var _minute = _second * 60;
-  //  var _hour = _minute * 60;
-  //  var _day = _hour * 24;
-	//
-  //  var interval = setInterval(function()
-  //  {
-  //      var date = new Date();
-  //      var end = new Date('05/14/2017 7:30 PM');
-  //      var distance = (end - date);
-	//
-  //   if (distance < 0) {
-  //            var distance = (Math.abs(distance))
-  //           }
-	//
-  //      var hourz = String(Math.floor(distance/_hour));
-  //      var minutes = String(Math.floor((distance%_hour)/_minute));
-  //      var seconds = String(Math.floor((distance%_minute)/_second));
-	// 		//  var mili = String(Math.floor((distance%_second)/_milliseconds));
-	//
-  //  if(hourz < 100)
-  //     {
-  //      if (hourz < 20)
-  //       {
-	//         // $('#hour0').attr('src', images[0]);
-  //         $('#hour1').attr('src', images[0]);
-  //         $('#hour2').attr('src', images[hourz.charAt(0)]);
-  //        }
-  //       else
-  //        {
-  //         // $('#hour0').attr('src', images[0]);
-  //         $('#hour1').attr('src', images[hourz.charAt(0)]);
-  //         $('#hour2').attr('src', images[hourz.charAt(1)]);
-  //        }
-  //      }
-  //     else
-  //     {
-  //         // $('#hour0').attr('src', images[hourz.charAt(0)]);
-  //         $('#hour1').attr('src', images[hourz.charAt(1)]);
-  //         $('#hour2').attr('src', images[hourz.charAt(2)]);
-  //     }
-	//
-  //      if(minutes < 20)
-  //     {
-  //         $('#minute1').attr('src', images[0]);
-  //         $('#minute2').attr('src', images[minutes.charAt(0)]);
-  //     }
-  //     else
-  //     {
-  //         $('#minute1').attr('src', images[minutes.charAt(1)]);
-  //         $('#minute2').attr('src', images[minutes.charAt(2)]);
-  //     }
-	//
-  //      if(seconds < 20)
-  //     {
-  //         $('#second1').attr('src', images[0]);
-  //         $('#second2').attr('src', images[seconds.charAt(0)]);
-  //     }
-  //     else
-  //     {
-  //         $('#second1').attr('src', images[seconds.charAt(0)]);
-  //         $('#second2').attr('src', images[seconds.charAt(1)]);
-  //     }
-	//  },1000)
 
 	var seconds = 0;
 	var minutes = 0;
@@ -175,8 +110,6 @@ var timer = setInterval(function(){
 		var randomImage4 = Math.floor(Math.random() * images.length + 1);
 		$('#minute1').attr('src', images[randomImage3]);
 		$('#minute2').attr('src', images[randomImage4]);
-
-
 	}
 
 	if(minutes >= 60){
@@ -186,13 +119,8 @@ var timer = setInterval(function(){
 		var randomImage6 = Math.floor(Math.random() * images.length + 1);
 		$('#hour1').attr('src', images[randomImage5]);
 		$('#hour2').attr('src', images[randomImage6]);
-
 	}
-
 },1000)
-
-
-
 });
 
 
@@ -200,4 +128,4 @@ var timer = setInterval(function(){
 
 
 
-//stupid nesting links in home page
+//fourth left

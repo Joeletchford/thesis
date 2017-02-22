@@ -1,14 +1,24 @@
 html{
 	background: black;
-	 margin:0 auto;
 	 overflow-y: hidden;
 	 overflow-x: hidden;
 }
 
+
+#circle-whit {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border: 3px solid white;
+  border-radius: 400px;
+  height: 750px;
+  width: 750px;
+	z-index: 9999999;
+	 margin: -400px 0 0 -400px;
+	 pointer-events: none;
+	 background: none !important;
 }
-
-
-#circle-white-1 {
+#circle-white {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -244,7 +254,7 @@ color: black;
 	orientation: 190deg;*/
 	bottom: 0px;
  right: 0px;
-     width: 500px;
+     width: 100vw;
 display: none;
 font-size: 7em;
 text-transform: uppercase;
@@ -317,7 +327,7 @@ right: 700px;
 	z-index:6;
 	position: absolute;
 	right:30px;
-	top: 200px;
+	top: 350px;
 	width: 400px;
 	filter:saturate(0);
 

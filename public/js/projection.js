@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://10.5.32.175:8080')
+var socket = io.connect('http://10.5.32.180:8080')
 //set up a place for us to connect to, and try to connect.
 
 var vid = document.getElementById("bgvid");
