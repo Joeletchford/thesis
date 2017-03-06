@@ -102,8 +102,8 @@ display: none;
 position: fixed;
 	color: black
 ;
-	-webkit-text-stroke-width: 2px;
-	 -webkit-text-stroke-color: red;
+	-webkit-text-stroke-width: 1px;
+	 -webkit-text-stroke-color: white;
 
 }
 .word-1{
@@ -123,8 +123,8 @@ direction:ltr;
 text-overflow: ellipsis;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 .word-2{
@@ -143,8 +143,8 @@ direction:ltr;
 text-overflow: ellipsis;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 
@@ -165,8 +165,8 @@ direction:ltr;
 text-overflow: ellipsis;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 
@@ -185,8 +185,8 @@ line-height: .8;
 direction:ltr;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 
@@ -205,8 +205,8 @@ line-height: .8;
 direction:ltr;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 
@@ -225,8 +225,8 @@ line-height: .8;
 direction:ltr;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 .word-7{
@@ -244,8 +244,8 @@ line-height: .8;
 direction:ltr;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
 
 }
 
@@ -263,8 +263,8 @@ line-height: .8;
 direction:rtl;
 position: fixed;
 color: black;
--webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: red;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
  z-index: -4;
 
 }

@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://10.5.32.180:8080')
+  var socket = io.connect('http://10.5.32.175:8080')
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
