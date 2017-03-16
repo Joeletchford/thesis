@@ -1,0 +1,71 @@
+@font-face {font-family: "Gill Facia MT Std Regular Display";
+  src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot"); /* IE9*/
+  src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("435079d34f9ef82c6ee56ba38e82d0ac.woff2") format("woff2"), /* chrome、firefox */
+  url("435079d34f9ef82c6ee56ba38e82d0ac.woff") format("woff"), /* chrome、firefox */
+  url("435079d34f9ef82c6ee56ba38e82d0ac.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("435079d34f9ef82c6ee56ba38e82d0ac.svg#Gill Facia MT Std Regular Display") format("svg"); /* iOS 4.1- */
+}
+/*map two*/
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: space-betwen;
+	width: 100vw;	height: 100vh;
+	padding: 10px;
+	position:absolute;
+}
+
+.map-type-left{
+		display: flex;
+		font-size: 5.5vw;
+    line-height: .9em;
+		z-index: 99999;
+		pointer-events: none;
+color: white;
+}
+.second-phrase {
+	font-family:"Gill Facia MT Std" !important;
+	width: 500px;
+
+
+}
+
+.second-phrase-2 {
+	font-family:"Gill Facia MT Std" !important;
+width: 500px;
+text-align:  left;
+
+}
+
+.second-phrase-3 {
+	font-family:"Gill Facia MT Std" !important;
+width: 500px;
+  text-align: right;
+
+}
+
+.second-phrase-4 {
+	font-family:"Gill Facia MT Std" !important;
+width: 500px;
+text-align: left;
+align-self:flex-end;
+
+}
+.second-phrase-5{
+	font-family:"Gill Facia MT Std" !important;
+width:500px;
+text-align: left;
+align-self:flex-end;
+
+}
+.second-phrase-6{
+	font-family:"Gill Facia MT Std" !important;
+width:500px;
+text-align: right;
+align-self:flex-end;
+
+}

@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://10.5.32.175:8080')
+  var socket = io.connect('http://10.5.32.142:8080')
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
@@ -30,8 +30,8 @@ $(document).ready(function() {
 
       // var s2vol = map(distortionAmount, 0, 1500, 0.0, 1.0)
       // var s1vol = map(distortionAmount, 0, 1500, 1.0, 0.0)
-      // sound2.volume = s2vol;
-      // sound1.volume = s1vol;
+      sound2.volume = s2vol;
+      sound1.volume = s1vol;
 
 		};
   });

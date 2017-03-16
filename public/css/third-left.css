@@ -104,6 +104,11 @@ position: fixed;
 ;
 	-webkit-text-stroke-width: 1px;
 	 -webkit-text-stroke-color: white;
+	 -webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+		-ms-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
 
 }
 .word-1{
@@ -125,6 +130,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 .word-2{
@@ -145,6 +155,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 
@@ -167,6 +182,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 
@@ -187,6 +207,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 
@@ -207,6 +232,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 
@@ -227,6 +257,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 .word-7{
@@ -246,6 +281,11 @@ position: fixed;
 color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 
@@ -266,6 +306,11 @@ color: black;
 -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: white;
  z-index: -4;
+ -webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 }
 .this{
@@ -274,6 +319,11 @@ color: black;
 	left: 0px;
 	top:-100px;
 	width: 800px;
+	-webkit-transition: 0.2s ease-in-out;
+	 -moz-transition: 0.2s ease-in-out;
+	 -o-transition: 0.2s ease-in-out;
+	 -ms-transition: 0.2s ease-in-out;
+	 transition: 0.2s ease-in-out;
 }
 .this-1 {
 	z-index:-1;
@@ -282,6 +332,11 @@ color: black;
 	top: 200px;
 	width: 700px;
 	filter:saturate(0) ;
+	-webkit-transition: 0.2s ease-in-out;
+	 -moz-transition: 0.2s ease-in-out;
+	 -o-transition: 0.2s ease-in-out;
+	 -ms-transition: 0.2s ease-in-out;
+	 transition: 0.2s ease-in-out;
 }
 .this-2 {
 	z-index:-4;
@@ -344,4 +399,9 @@ right: 700px;
 /*-webkit-transform: rotate(-640deg);*/
 img:hover + p{
 	display: block;
+	-webkit-transition: 0.2s ease-in-out;
+	 -moz-transition: 0.2s ease-in-out;
+	 -o-transition: 0.2s ease-in-out;
+	 -ms-transition: 0.2s ease-in-out;
+	 transition: 0.2s ease-in-out;
 }
