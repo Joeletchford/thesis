@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Disconnect</title>
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/tachyons.css">
+	<link rel="stylesheet" href="/css/split-right.css" media="screen" title="no title">
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.0-beta13/howler.min.js"></script>
+	<link href="//db.onlinewebfonts.com/c/55aadde4bb7147c1acbcad2d52aa320f?family=Lydian+MT" rel="stylesheet" type="text/css" />
+
+	<!-- <script type="text/javascript" charset="utf-8" src="js/nav-right.js"></script> -->
+
+
+	<script type="text/javascript">
+		var titleText = document.title;
+
+		function titleMarquee() {
+			titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+			document.title = titleText;
+			setTimeout("titleMarquee()", 175);
+		}
+	</script>
+</head>
+<audio id="audio1" src="images/forest.mp3" autoplay loop></audio>
+<audio id="audio2" src="images/white.mp3" autoplay loop></audio>
+
+<style media="screen"></style>
+
+<body onload="titleMarquee()">
+
+
+	<!--  navigation    -->
+
+	<div id="circle">
+		<div id="circle-stepin">
+			<div id="circle-stepin-in">
+				<a href="index.html" target="_parent">
+					<div id="circle-stepin-in-link">
+					</div>
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+<!-- trying to make butons  -->
+
+
+
+<!--  my original shitty buttons -->
+
+
+<div class="checkboxOne">
+		<input type="checkbox" id="checkboxOneInput" onclick="myFunction()" value="1" name="" checked ></input>
+		<label for="checkboxOneInput"></label>
+</div>
+
+<div class="checkboxTwo">
+		<input type="checkbox" id="checkboxTwoInput" onclick="myFunction2()" value="1" name="" checked ></input>
+		<label for="checkboxTwoInput"></label>
+</div>
+
+
+
+<div class="left-clock">
+
+
+	<div id="clock">
+		<img id="hour1" src="images/18.png" />
+		<img id="hour2" src="images/18.png" />
+
+		<img id="minute1" src="images/18.png" />
+		<img id="minute2" src="images/18.png" />
+
+		<img id="second1" src="images/18.png" />
+		<img id="second2" src="images/18.png" />
+	</div>
+</div>
+
+<div class="right-text">
+
+
+	<div id="myDIV">
+		To reach the realm of un-knowing or presence within one's act of disconnectionone must relinquish all mental control over the actions with which they are participatingIndividuals of all kinds from the professional athletes to artists to amateur outdooradventurers constantly seek this mental realmit is a space of awareness / unawareness unlike any otherThe body is present with your actions creating full connection with you and your environment Your mind blurs leaving you to your most present mental
+		capacity.
+</div>
+	<div id="myDIV2">
+		Much of what I seek within moments of disconnection is this place of flow. The flow state is what allows the individual to enter into the realm of un-knowing through a physical action. Once within that state and assuming you have achieved a sense of non-existent social implications, you have achieved personal disconnection and are experiencing the realm of un-knowing. I consider the flow state that Csikszentmihalyi created, the parent of unknowing thought, or maybe the nest which un-knowing rests within. I think this due to my own experiences with these two states of consciousness and the fact that the only access is have to experiences in the realm of un-knowing is through achieving a flow state.
+
+	</div>
+</div>
+
+
+</body>
+
+
+
+
+
+<!-- the end -->
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<!-- <script src="/js/howler.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="/js/mobileDrag.js" charset="utf-8"></script>
+<script src="/js/index.js" charset="utf-8"></script>
+
+</html>

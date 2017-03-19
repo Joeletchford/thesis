@@ -107,7 +107,10 @@ body {
     align-content: flex-start;
 }
 
-
+#box{
+	width: 100vw;
+	height: 100vh;
+}
 #image1 {
 
 	cursor: move;

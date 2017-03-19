@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://10.5.32.142:8080')
+  var socket = io.connect('http://10.5.32.145:3000')
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
@@ -28,8 +28,8 @@ $(document).ready(function() {
       var sound1 = document.getElementById("audio1");
       var sound2 = document.getElementById("audio2");
 
-      // var s2vol = map(distortionAmount, 0, 1500, 0.0, 1.0)
-      // var s1vol = map(distortionAmount, 0, 1500, 1.0, 0.0)
+      var s2vol = map(distortionAmount, 0, 1200, 0.0, 1.0)
+      var s1vol = map(distortionAmount, 0, 1200, 0.6, 0.0)
       sound2.volume = s2vol;
       sound1.volume = s1vol;
 
@@ -128,4 +128,30 @@ var timer = setInterval(function(){
 
 
 
-//fourth left
+
+
+
+//fthird right
+
+
+function myFunction() {
+    var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function myFunction2() {
+    var x = document.getElementById('myDIV2');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+
+
+// block horizontal scroll

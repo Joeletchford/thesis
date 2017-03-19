@@ -1,0 +1,168 @@
+#circle-whit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 3px solid black;
+    border-radius: 400px;
+    height: 750px;
+    width: 750px;
+    z-index: 9999999;
+    margin: -400px 0 0 -400px;
+    pointer-events: none;
+    background: none !important;
+}
+
+#circle-white {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 3px solid black;
+    border-radius: 400px;
+    height: 750px;
+    width: 750px;
+    z-index: 9999999;
+    margin: -400px 0 0 -400px;
+    pointer-events: none;
+    background: none !important;
+}
+
+#circle-stepin-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3px solid black;
+    border-radius: 275px;
+    height: 550px;
+    width: 550px;
+    z-index: 9999999;
+    margin: -275px 0 0 -275px;
+    pointer-events: none;
+    background: none !important;
+}
+
+#circle-stepin-in-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3px solid black;
+    border-radius: 175px;
+    height: 350px;
+    width: 350px;
+    z-index: 9999999;
+    margin: -175px 0 0 -175px;
+    pointer-events: none;
+    background: none !important;
+}
+
+#circle-stepin-in-link-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3px solid black;
+    border-radius: 75px;
+    height: 150px;
+    width: 150px;
+    z-index: 9999999;
+    margin: -75px 0 0 -75px;
+    pointer-events: all !important;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+#circle-stepin-in-link-white:hover {
+    transition: background-color;
+    background-color: black;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+body {
+    background: white;
+    height: 800px;
+    overflow: hidden;
+
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.outershell {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+#box{
+	width: 100vw;
+	height: 100vh;
+}
+#image1 {
+
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+  z-index: 0
+}
+
+#image2 {
+
+	cursor: move;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+	height: 50%;
+	float: left;
+  position: absolute;
+
+  z-index: 0
+}
+#image3 {
+
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -15.5% 0 0 -20.5%;
+  z-index: 0
+}
+#image4 {
+
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+  z-index: 0
+}
+.top {
+    z-index: 2;
+    position: relative
+}
+
+.bottom {
+    z-index: 1;
+    position: relative
+}

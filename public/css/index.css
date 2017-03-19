@@ -763,7 +763,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 width:100%;
-height:1200px;
+height:100%;
+z-index: -999;
 /*margin: -600px 0 0 -350px;*/
 }
 #hour0{
@@ -866,48 +867,39 @@ width: 100%;
   url("onlinewebfonts.svg#Ogg-Roman") format("svg"); /* iOS 4.1- */
 }
 
-
-.type-addition{
-	-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
-    -moz-columns: 100px 3; /* Firefox */
-    columns: 100px 3;
-		height: 300px;
-	font-family:"Ogg-Roman" !important;
+.hold-me{
 	display: inline;
-	width: 100%;
+	height: 100vh;
+	z-index: 99999;
+
+}
+#type-addition{
+    columns:4;
+		height:33vh;
+	font-family:"Ogg-Roman" !important;
 	z-index: 10;
-	padding: 10px;
-	position: absolute;
+	padding: 20px;
 	font-size: 3em;
+	overflow-x: scroll;
 	/*-webkit-column-count: 3*/
 }
-.type-addition-one{
-	-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
-    -moz-columns: 100px 3; /* Firefox */
-    columns: 100px 3;
-		height: 300px;
+#type-addition-one{
+    columns: 3;
+	height: 33vh;
 	font-family:"Ogg-Roman" !important;
-	display: inline;
-	width: 100%;
 	z-index: 10;
-	padding: 10px;
-	position: absolute;
-	font-size: 3em;
-			top:400px;
+	padding: 20px;
+	font-size: 2.5em;
+	overflow-x: scroll;
 }
-	.type-addition-two{
-		-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
-	    -moz-columns: 100px 3; /* Firefox */
-	    columns: 100px 3;
-			height: 300px;
+	#type-addition-two{
+	    columns: 2 ;
+			height: 33vh;
 		font-family:"Ogg-Roman" !important;
-		display: inline;
-		width: 100%;
 		z-index: 10;
-		padding: 10px;
-		position: absolute;
-		font-size: 3em;
-				top:800px;
+		padding: 20px;
+		font-size: 2em;
+		overflow-x: scroll;
 	}
 
 

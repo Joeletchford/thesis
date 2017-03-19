@@ -3,11 +3,11 @@ var express = require('express');
 var app = express();
 var server = require('http').Server( app ) // start a server instance on a port
 var io = require('socket.io')(server) // use socket.io for real time connections aka. wesockets
-var port = 8080;
+var port = 3000;
 
 var timers = require('timers');
 
-server.listen(port, "10.5.32.142", function() { // set up a server on port 3000, do a callback when it started successfully
+server.listen(port, "10.5.32.145", function() { // set up a server on port 3000, do a callback when it started successfully
   console.log("server started on ", port);
 });
 
@@ -22,8 +22,8 @@ io.on('connection', function(socket) { // if socket.io sees a new connection, do
 
     distortionAmount = distortionAmount + 9
     //dont go higher than 1500
-    if(distortionAmount > 1500){
-      distortionAmount = 1500;
+    if(distortionAmount > 1200){
+      distortionAmount = 1200;
     }
 
     io.emit('amountToDistort', distortionAmount);
