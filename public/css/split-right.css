@@ -300,8 +300,109 @@ input[type=checkbox] {
 }
 
 
+#clock {
+	/*top: 50%;
+	left: 50%;*/
+position: fixed;
+display: flex;
+align-items: center;
+justify-content: center;
+width:100%;
+height:100%;
+z-index: -999;
+/*margin: -600px 0 0 -350px;*/
+}
+#hour0{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#hour1{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#hour2{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width:100%;
+}
+#minute1{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width:100%;
+}
+#minute2{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#second1{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#second2{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#mili1{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#mili2{
+position: absolute;
+display: flex;
+align-items: center;
+align-self: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+#dots{
+z-index: -1;
+position: fixed;
+height: 100%;
+width: 100%;
+}
 
-#clock{
+
+
+/*#clock{
 
 }
 
@@ -340,7 +441,7 @@ position: absolute;
 #second2 {
   position: absolute;
 
-}
+}*/
 
 
 /*type on the blok.html page*/
@@ -360,7 +461,7 @@ body{
 	float: left;
 	height: 100vh;
 	overflow-y: scroll;
-	color: white;
+	color: black;
 }
 
 #myDIV2 {
@@ -373,7 +474,7 @@ body{
 	float: left;
 	height: 100vh;
 	overflow-y: scroll;
-	color: white;
+	color: black;
 }
 #myDIV3 {
 	position: absolute;
@@ -385,7 +486,7 @@ body{
 	float: left;
 	height: 100vh;
 	overflow-y: scroll;
-	color: white;
+	color: black;
 }
 #myDIV4 {
 	position: absolute;
@@ -397,7 +498,7 @@ body{
 	float: left;
 	height: 100vh;
 	overflow-y: scroll;
-	color: white;
+	color: black;
 }
 
 .images {
@@ -418,7 +519,7 @@ body{
     float: left;
     height: 100vh;
     overflow-y: scroll;
-		color: white;
+		color: black;
 }
 
 #ital{
