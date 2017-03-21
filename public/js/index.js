@@ -3,7 +3,17 @@
 
 $(document).ready(function() {
   // socket stuff
-  var socket = io.connect('http://10.5.32.145:3000')
+
+	// wifi this is it
+  // var socket = io.connect('http://10.5.32.124:8080')
+
+
+
+
+	var socket = io.connect() // connect to the server
+
+
+
 
   socket.on('connect', function(data) { // when connected, do something
     console.log("connected to the server" + socket.id); // log out out id
@@ -152,6 +162,22 @@ function myFunction2() {
     }
 }
 
+function myFunction3() {
+    var x = document.getElementById('myDIV3');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function myFunction4() {
+    var x = document.getElementById('myDIV4');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
 
 
 // block horizontal scroll

@@ -1,17 +1,7 @@
 /*-------------------------------*/
 
 
-@font-face {
-    font-family: "Gill Facia MT Std Regular Display";
-    src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot");
-    /* IE9*/
-    src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("435079d34f9ef82c6ee56ba38e82d0ac.woff2") format("woff2"), /* chrome、firefox */
-    url("435079d34f9ef82c6ee56ba38e82d0ac.woff") format("woff"), /* chrome、firefox */
-    url("435079d34f9ef82c6ee56ba38e82d0ac.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("435079d34f9ef82c6ee56ba38e82d0ac.svg#Gill Facia MT Std Regular Display") format("svg");
-    /* iOS 4.1- */
-}
+
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -234,8 +224,66 @@ input[type=checkbox] {
 	background: black;
 }
 
+/*three*/
 
 
+.checkboxThree{
+	width: 40px;
+	height: 40px;
+	margin: 110px 5px;
+
+	border-radius: 100%;
+	position: relative;
+		position: fixed;
+	left: 20px;
+		z-index: 9999999;
+}
+.checkboxThree label {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 100px;
+  border: 2px solid black;
+	transition: all .1s ease;
+	cursor: pointer;
+	position: absolute;
+
+	z-index: 1;
+}
+
+.checkboxThree input[type=checkbox]:checked + label {
+	background: black;
+}
+
+/*four*/
+
+.checkboxFour{
+	width: 40px;
+	height: 40px;
+	margin: 165px 5px;
+
+	border-radius: 100%;
+	position: relative;
+		position: fixed;
+	left: 20px;
+		z-index: 9999999;
+}
+.checkboxFour label {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 100px;
+  border: 2px solid black;
+	transition: all .1s ease;
+	cursor: pointer;
+	position: absolute;
+
+	z-index: 1;
+}
+
+.checkboxFour input[type=checkbox]:checked + label {
+	background: black;
+}
 
 
 
@@ -299,12 +347,12 @@ position: absolute;
 
 body{
 	  background-color: black;
+			font-family: 'Space Mono', monospace;
 }
 
 
 #myDIV {
 	position: absolute;
-	font-family: helvetica;
 	font-weight: lighter;
 	z-index: 10;
 	padding: 10px;
@@ -317,7 +365,31 @@ body{
 
 #myDIV2 {
 	position: absolute;
-	font-family: helvetica;
+
+		font-weight: lighter;
+	z-index: 10;
+	padding: 10px;
+	font-size: 3em;
+	float: left;
+	height: 100vh;
+	overflow-y: scroll;
+	color: white;
+}
+#myDIV3 {
+	position: absolute;
+
+		font-weight: lighter;
+	z-index: 10;
+	padding: 10px;
+	font-size: 3em;
+	float: left;
+	height: 100vh;
+	overflow-y: scroll;
+	color: white;
+}
+#myDIV4 {
+	position: absolute;
+
 		font-weight: lighter;
 	z-index: 10;
 	padding: 10px;
@@ -329,7 +401,7 @@ body{
 }
 
 .images {
-    font-family: helvetica;
+
     z-index: 10;
     padding: 10px;
     font-size: 4em;
@@ -339,7 +411,7 @@ body{
 }
 
 .type-addition-one {
-    font-family: helvetica;
+
     z-index: 10;
     padding: 10px;
     font-size: 4em;
@@ -347,6 +419,10 @@ body{
     height: 100vh;
     overflow-y: scroll;
 		color: white;
+}
+
+#ital{
+	font-style: italic;
 }
 
 

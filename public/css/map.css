@@ -13,14 +13,17 @@
 /*font-family: 'Droid Serif', serif;*/
 
 .flex{
+	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: space-betwen;
-	width: 100vw;	height: 100vh;
-	padding: 10px;
-	position:absolute;
+	width: 100vw;
+ height: 100vh;
+ 	position: fixed;
+	pointer-events: none;
+	z-index: 99999;
 }
 
 .map-type-left{

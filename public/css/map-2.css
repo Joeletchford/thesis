@@ -9,27 +9,36 @@
 /*map two*/
 
 .flex{
+	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: space-betwen;
-	width: 100vw;	height: 100vh;
-	padding: 10px;
-	position:absolute;
+	width: 100vw;
+ height: 100vh;
+ 	position: fixed;
+	pointer-events: none;
+
+
+	z-index: 99999;
 }
 
 .map-type-left{
-		display: flex;
-		font-size: 5.5vw;
-    line-height: .9em;
-		z-index: 99999;
-		pointer-events: none;
+
+	display: flex;
+	font-size: 5vw;
+	line-height: .9em;
+	z-index: 99999;
+	pointer-events: none;
+
 color: white;
+
 }
 .second-phrase {
 	font-family:"Gill Facia MT Std" !important;
 	width: 500px;
+	pointer-events: none;
 
 
 }
@@ -38,6 +47,7 @@ color: white;
 	font-family:"Gill Facia MT Std" !important;
 width: 500px;
 text-align:  left;
+pointer-events: none;
 
 }
 
@@ -45,6 +55,7 @@ text-align:  left;
 	font-family:"Gill Facia MT Std" !important;
 width: 500px;
   text-align: right;
+	pointer-events: none;
 
 }
 
@@ -53,6 +64,7 @@ width: 500px;
 width: 500px;
 text-align: left;
 align-self:flex-end;
+pointer-events: none;
 
 }
 .second-phrase-5{
@@ -60,6 +72,7 @@ align-self:flex-end;
 width:500px;
 text-align: left;
 align-self:flex-end;
+pointer-events: none;
 
 }
 .second-phrase-6{
@@ -67,5 +80,7 @@ align-self:flex-end;
 width:500px;
 text-align: right;
 align-self:flex-end;
+bottom: 1px;
+pointer-events: none;
 
 }
