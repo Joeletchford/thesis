@@ -116,7 +116,7 @@ legend {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 3px solid black;
+    border: 6px solid cyan;
     border-radius: 175px;
     height: 350px;
     width: 350px;
@@ -453,17 +453,22 @@ body{
 
 
 #myDIV {
-	position: absolute;
+
 	font-weight: lighter;
 	z-index: 10;
 	padding: 10px;
-	font-size: 3em;
 	float: left;
 	height: 100vh;
-	overflow-y: scroll;
+	font-size: 3em;
 	color: black;
+	overflow-y: scroll;
 }
 
+.fuck{
+	 /*position: absolute;*/
+	font-size: .5em;
+	display: inline-block;
+}
 #myDIV2 {
 	position: absolute;
 

@@ -84,3 +84,78 @@ bottom: 1px;
 pointer-events: none;
 
 }
+
+
+
+
+
+
+
+
+#circle {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border: 3px solid white;
+  border-radius: 400px;
+  height: 750px;
+  width: 750px;
+	z-index: 9999999;
+	 margin: -400px 0 0 -400px;
+	 pointer-events: none;
+	 background: none !important;
+}
+#circle-stepin {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 3px solid white;
+  border-radius: 275px;
+  height: 550px;
+  width: 550px;
+	z-index: 9999999;
+	 margin: -275px 0 0 -275px;
+	 pointer-events: none;
+	 background: none !important;
+}
+
+#circle-stepin-in {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 3px solid white;
+  border-radius: 175px;
+  height: 350px;
+  width: 350px;
+	z-index: 9999999;
+	 margin: -175px 0 0 -175px;
+	 pointer-events: none;
+	 background: none !important;
+}
+#circle-stepin-in-link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 6px solid cyan;
+  border-radius: 75px;
+  height: 150px;
+  width: 150px;
+	z-index: 9999999;
+	 margin: -75px 0 0 -75px;
+	 pointer-events:all !important;
+	 -webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+		-ms-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+
+}
+div#circle-stepin-in-link:hover{
+	 transition: background-color;
+	background-color: white;
+	-webkit-transition: 0.2s ease-in-out;
+	 -moz-transition: 0.2s ease-in-out;
+	 -o-transition: 0.2s ease-in-out;
+	 -ms-transition: 0.2s ease-in-out;
+	 transition: 0.2s ease-in-out;
+}
