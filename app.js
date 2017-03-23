@@ -3,8 +3,17 @@ var express = require('express');
 var app = express();
 var server = require('http').Server( app ) // start a server instance on a port
 var io = require('socket.io')(server) // use socket.io for real time connections aka. wesockets
+// with wifi
 
-var port = process.env.PORT || 8000
+var port = 8080;
+var timers = require('timers');
+server.listen(port, "10.5.32.124", function() {
+  console.log("server started on ", port);
+});
+
+//  local host
+
+// var port = process.env.PORT || 8000
 var timers = require('timers');
 
 server.listen(port, function() {
@@ -13,18 +22,6 @@ server.listen(port, function() {
 
 app.use(express.static('public')); //load out anything in the 'public' folder
 
-
-//  using with wifi
-
-// var express = require('express');
-// var app = express();
-// var server = require('http').Server( app )
-// var io = require('socket.io')(server)
-// var port = 8080;
-// var timers = require('timers');
-// server.listen(port, "10.5.32.124", function() {
-//   console.log("server started on ", port);
-// });
 
 app.use(express.static('public')); //load out anything in the 'public' folder
 
