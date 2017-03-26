@@ -22,8 +22,9 @@
 	width: 100vw;
  height: 100vh;
  	position: fixed;
-	pointer-events: none;
+	pointer-events: none !important;
 	z-index: 99999;
+
 }
 
 .map-type-left{
@@ -33,12 +34,13 @@
 		z-index: 99999;
 		pointer-events: none;
 color: white;
+	pointer-events: none !important;
 }
 
 .second-phrase {
 	font-family:"Ogg-Roman" !important;
 	width: 500px;
-
+	pointer-events: none !important;
 
 }
 
@@ -46,14 +48,14 @@ color: white;
 	font-family:"Ogg-Roman" !important;
 width: 500px;
 text-align:  left;
-
+	pointer-events: none !important;
 }
 
 .second-phrase-3 {
 	font-family:"Ogg-Roman" !important;
 width: 500px;
   text-align: right;
-
+	pointer-events: none !important;
 }
 
 .second-phrase-4 {
@@ -61,21 +63,21 @@ width: 500px;
 width: 500px;
 text-align: left;
 align-self:flex-end;
-
+	pointer-events: none !important;
 }
 .second-phrase-5{
 	font-family:"Ogg-Roman" !important;
 width:500px;
 text-align: left;
 align-self:flex-end;
-
+	pointer-events: none !important;
 }
 .second-phrase-6{
 	font-family:"Ogg-Roman" !important;
 width:500px;
 text-align: right;
 align-self:flex-end;
-
+	pointer-events: none !important;
 }
 
 
@@ -84,71 +86,82 @@ align-self:flex-end;
 		 pointer-events: none;
 }
 
+.fourth {
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
 
-#circle {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	border: 3px solid white;
-  border-radius: 400px;
-  height: 750px;
-  width: 750px;
-	z-index: 9999999;
-	 margin: -400px 0 0 -400px;
-	 pointer-events: none;
-	 background: none !important;
-}
-#circle-stepin {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 3px solid white;
-  border-radius: 275px;
-  height: 550px;
-  width: 550px;
-	z-index: 9999999;
-	 margin: -275px 0 0 -275px;
-	 pointer-events: none;
-	 background: none !important;
+    z-index: 9999999;
+    transition: 0.2s all;
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+		width: 50vh;
+ height: 50vh;
 }
 
-#circle-stepin-in {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 3px solid white;
-  border-radius: 175px;
-  height: 350px;
-  width: 350px;
+div.fourth:hover {
+	transition: background-color;
+	background-color: black;
+
+}
+
+
+.together{
+position: fixed;
+display: flex;
+flex-direction: row;
+	z-index: 99999999999;
+
+
+}
+
+
+
+#refrence-circle{
+		border-radius: 50%;
+		border: 3px solid red;
 	z-index: 9999999;
-	 margin: -175px 0 0 -175px;
+	 pointer-events: none;
+	 background: none !important;
+position: relative;
+	 width: 50vh;
+	 height: 50vh;
+}
+
+
+
+
+
+#circle-stepin-in{
+	z-index: 9999999;
 	 pointer-events: none;
 	 background: none !important;
 }
 #circle-stepin-in-link {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 6px solid cyan;
-  border-radius: 75px;
-  height: 150px;
-  width: 150px;
+	display: inline-block;
+	position: relative;
+	border: 3px solid white;
+	border-radius: 50%;
+	width: 100%;
+	height: auto;
 	z-index: 9999999;
-	 margin: -75px 0 0 -75px;
+	transition: 0.2s all;
+	order: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	width: 50vh;
+	height: 50vh;
+
 	 pointer-events:all !important;
-	 -webkit-transition: 0.2s ease-in-out;
-		-moz-transition: 0.2s ease-in-out;
-		-o-transition: 0.2s ease-in-out;
-		-ms-transition: 0.2s ease-in-out;
-		transition: 0.2s ease-in-out;
+
 
 }
 div#circle-stepin-in-link:hover{
 	 transition: background-color;
 	background-color: white;
-	-webkit-transition: 0.2s ease-in-out;
-	 -moz-transition: 0.2s ease-in-out;
-	 -o-transition: 0.2s ease-in-out;
-	 -ms-transition: 0.2s ease-in-out;
-	 transition: 0.2s ease-in-out;
+		transition: 0.2s all;
 }

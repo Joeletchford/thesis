@@ -7,13 +7,13 @@ var io = require('socket.io')(server) // use socket.io for real time connections
 
 var port = 8080;
 var timers = require('timers');
-server.listen(port, "10.5.30.131", function() {
-  console.log("server started on ", port);
-});
+// server.listen(port, "10.5.32.124", function() {
+//   console.log("server started on ", port);
+// });
 
 //  local host
 
-// var port = process.env.PORT || 8000
+var port = process.env.PORT || 8000
 var timers = require('timers');
 
 server.listen(port, function() {

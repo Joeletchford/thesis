@@ -18,13 +18,48 @@
 			<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.0-beta13/howler.min.js"></script>
 			<!-- <script type="text/javascript" charset="utf-8" src="js/nav-right.js"></script> -->
+
+			<script type="text/javascript">
+				$(function() {
+					var images = ['space.jpg', 'space-1.jpg', 'space-2.jpg', 'space-3.jpg', 'space-4.jpg', 'space-5.jpg', 'space-6.jpg', 'space-7.jpg'];
+					$('#background').css({
+						'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'
+					});
+				});
+			</script>
+
+
+
+
+
+
+
+
+
+
 			<style>
-				html,
+					html,
 				body {
-					background-color: white;
+					/*background-color: white;*/
 					height: 100%;
 					margin: 0;
 					padding: 0;
+				}
+
+				#background {
+					position: fixed;
+					left: 0px;
+					top: 0px;
+					background-size: 100%;
+					width: 100%;
+					height: 100%;
+					-webkit-user-select: none;
+					-khtml-user-select: none;
+					-moz-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+					z-index: -999999999;
+					pointer-events: none;
 				}
 			</style>
 
@@ -36,7 +71,9 @@
 
 <body>
 
-
+	<div id="background"></div>
+	  <div class="container">
+	  </div>
 
 	<!-- <audio id="audio1" src="images/forest.mp3" autoplay loop></audio>
 	<audio id="audio2" src="images/white.mp3" autoplay loop></audio> -->
@@ -46,55 +83,53 @@
 	<div class="dia-hold">
 		<div class="parent">
 
-			<a href="fourth-left.html" target="_parent">
-				<div class="dia">
+			<a href="cap.html" target="_parent">
+				<div class="fourth">
 				</div>
 			</a>
 
-
-			<a href="thrid-left.html" target="_parent">
-				<div class="one">
-				</div>
-			</a>
 
 			<a href="block.html" target="_parent">
-				<div class="two">
+				<div class="third">
 				</div>
 			</a>
 
-			<a href="cap.html" target="_parent">
-				<div class="three-link">
+			<a href="thrid-left.html" target="_parent">
+				<div class="second">
+				</div>
+			</a>
+
+			<a href="fourth-left.html" target="_parent">
+				<div class="one">
 				</div>
 			</a>
 		</div>
 
-
 		<div class="parent">
 
 			<a href="fourth-right.html" target="_parent">
-				<div class="dia">
+				<div class="fourth">
 				</div>
 			</a>
 
 
 			<a href="third-right.html" target="_parent">
-				<div class="one">
+				<div class="third">
 				</div>
 			</a>
 
 			<a href="split-right-2.html" target="_parent">
-				<div class="two">
+				<div class="second">
 				</div>
 			</a>
 
 			<a href="map-2.html" target="_parent">
-				<div class="three-link">
+				<div class="one">
 				</div>
 			</a>
 		</div>
+
 	</div>
-
-
 
 
 </body>

@@ -5,12 +5,12 @@ $(document).ready(function() {
   // socket stuff
 
 	// wifi this is it
-  var socket = io.connect('http://10.5.30.131:8080')
+  // var socket = io.connect('http://10.5.30.131:8080')
 
 
 
 	//
-	// var socket = io.connect() // connect to the server
+	var socket = io.connect() // connect to the server
 
 
 

@@ -153,86 +153,61 @@ img:hover+p {
 
 /*circles*/
 
-#circle-whit {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border: 3px solid white;
-    border-radius: 400px;
-    height: 750px;
-    width: 750px;
-    z-index: 9999999;
-    margin: -400px 0 0 -400px;
-    pointer-events: none;
-    background: none !important;
+.together{
+position: fixed;
+display: flex;
+flex-direction: row;
+	bottom: 0;
+	width: 100vw;
+	z-index: 99999999999;
+
+
 }
 
-#circle-white {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border: 3px solid white;
-    border-radius: 400px;
-    height: 750px;
-    width: 750px;
-    z-index: 9999999;
-    margin: -400px 0 0 -400px;
-    pointer-events: none;
-    background: none !important;
+
+
+#refrence-circle{
+		border-radius: 50%;
+		border: 3px solid red;
+	z-index: 9999999;
+	 pointer-events: none;
+	 background: none !important;
+position: relative;
+	 width: 50vh;
+	 height: 50vh;
 }
 
-#circle-stepin-white {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 6px solid cyan;
-    border-radius: 275px;
-    height: 550px;
-    width: 550px;
-    z-index: 9999999;
-    margin: -275px 0 0 -275px;
-    pointer-events: none;
-    background: none !important;
-}
 
-#circle-stepin-in-white {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 3px solid white;
-    border-radius: 175px;
-    height: 350px;
-    width: 350px;
-    z-index: 9999999;
-    margin: -175px 0 0 -175px;
-    pointer-events: none;
-    background: none !important;
-}
 
-#circle-stepin-in-link-white {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 3px solid white;
-    border-radius: 75px;
-    height: 150px;
-    width: 150px;
-    z-index: 9999999;
-    margin: -75px 0 0 -75px;
-    pointer-events: all !important;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-}
 
-div#circle-stepin-in-link-white:hover {
-    transition: background-color;
-    background-color: white;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
+
+#circle-stepin-in{
+	z-index: 9999999;
+	 pointer-events: none;
+	 background: none !important;
+}
+#circle-stepin-in-link {
+	display: inline-block;
+	position: relative;
+	border: 3px solid white;
+	border-radius: 50%;
+	width: 100%;
+	height: auto;
+	z-index: 9999999;
+	transition: 0.2s all;
+	order: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	width: 50vh;
+	height: 50vh;
+
+	 pointer-events:all !important;
+
+
+}
+div#circle-stepin-in-link:hover{
+	 transition: background-color;
+	background-color: white;
+		transition: 0.2s all;
 }
