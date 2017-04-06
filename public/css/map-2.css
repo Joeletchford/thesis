@@ -1,12 +1,11 @@
-@font-face {font-family: "Gill Facia MT Std Regular Display";
-  src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot"); /* IE9*/
-  src: url("435079d34f9ef82c6ee56ba38e82d0ac.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("435079d34f9ef82c6ee56ba38e82d0ac.woff2") format("woff2"), /* chrome、firefox */
-  url("435079d34f9ef82c6ee56ba38e82d0ac.woff") format("woff"), /* chrome、firefox */
-  url("435079d34f9ef82c6ee56ba38e82d0ac.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("435079d34f9ef82c6ee56ba38e82d0ac.svg#Gill Facia MT Std Regular Display") format("svg"); /* iOS 4.1- */
+@font-face {font-family: "Ogg-Roman";
+  src: url("onlinewebfonts.eot"); /* IE9*/
+  src: url("onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */
+  url("onlinewebfonts.woff") format("woff"), /* chrome、firefox */
+  url("onlinewebfonts.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("onlinewebfonts.svg#Ogg-Roman") format("svg"); /* iOS 4.1- */
 }
-/*map two*/
 
 .flex{
 	padding: 10px;
@@ -36,7 +35,7 @@ color: white;
 
 }
 .second-phrase {
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 	width: 500px;
 	pointer-events: none;
 
@@ -44,7 +43,7 @@ color: white;
 }
 
 .second-phrase-2 {
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 width: 500px;
 text-align:  left;
 pointer-events: none;
@@ -52,7 +51,7 @@ pointer-events: none;
 }
 
 .second-phrase-3 {
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 width: 500px;
   text-align: right;
 	pointer-events: none;
@@ -60,7 +59,7 @@ width: 500px;
 }
 
 .second-phrase-4 {
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 width: 500px;
 text-align: left;
 align-self:flex-end;
@@ -68,7 +67,7 @@ pointer-events: none;
 
 }
 .second-phrase-5{
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 width:500px;
 text-align: left;
 align-self:flex-end;
@@ -76,7 +75,7 @@ pointer-events: none;
 
 }
 .second-phrase-6{
-	font-family:"Gill Facia MT Std" !important;
+	font-family:"Ogg-Roman" !important;
 width:500px;
 text-align: right;
 align-self:flex-end;
@@ -100,7 +99,7 @@ float:right;
 	bottom: 0;
 
 	z-index: 99999999999;
-
+pointer-events: none !important;
 
 }
 

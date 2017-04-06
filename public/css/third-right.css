@@ -26,6 +26,7 @@ sup {
 	top: .5em; }
 
 .word {
+
     z-index: 9999;
 		width: 800px;
     display: none;
@@ -59,76 +60,87 @@ sup {
 
 
 .this {
+	cursor: none;
 	float: left;
-	 width: 1000px;
+	 width: 100%;
     z-index: 0;
     position: relative;
 		  filter: saturate(0)
 }
 
 .this-1 {
+	cursor: none;
 	float: right;
-	 width: 1000px;
+	 width: 100%;
 		z-index: 0;
 		position: relative;
 		  filter: saturate(0)
 }
 
 .this-2 {
+	cursor: none;
 	float: left;
-	 width: 1000px;
+	 width: 100%;
     z-index: 0;
     position: relative;
 		  filter: saturate(0)
 }
 
 .this-3 {
+	cursor: none;
 	float: right;
-	 width: 1000px;
+	 width: 100%;
 		z-index: 0;
 		position: relative;
 		  filter: saturate(0)
 }
 
 .this-4 {
+	cursor: none;
 	float: left;
-	 width: 1000px;
+	 width: 100%;
     z-index: 0;
     position: relative;
 		  filter: saturate(0)
 }
 
 .this-5 {
+	cursor: none;
 	float: right;
-	 width: 1000px;
+	 width: 100%;
 		z-index: 0;
 		position: relative;
 		  filter: saturate(0)
 }
 
 .this-6 {
+	cursor: none;
 	float: left;
-	 width: 1000px;
+	 width: 100%;
 		z-index: 0;
 		position: relative;
 		  filter: saturate(0)
 }
 
 .this-7 {
+	cursor: none;
 	float: right;
-	 width: 1000px;
+	 width: 100%;
 		z-index: 0;
 		position: relative;
 		  filter: saturate(0)
 }
 
 .this-8 {
+	cursor: none;
     z-index: 0;
+		width: 100%;
     position: relative;
     filter: saturate(0)
 }
 
 .word-1 {
+
     z-index: 9999;
 		width: 800px;
 		display: block;
@@ -158,7 +170,6 @@ position: fixed;
 display: flex;
 flex-direction: row;
 	bottom: 0;
-	width: 100vw;
 	z-index: 99999999999;
 
 

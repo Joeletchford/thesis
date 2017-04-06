@@ -1,5 +1,13 @@
 
+body {
+    background: black;
+    height: 800px;
+    overflow: hidden;
+}
+
+
 .together{
+	position: fixed;
 display: flex;
 flex-direction: row;
 float:right;
@@ -59,12 +67,6 @@ div#circle-stepin-in-link:hover{
 }
 
 
-body {
-    background: black;
-    height: 800px;
-    overflow: hidden;
-}
-
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -81,54 +83,59 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-start;
-    overflow: hidden;
+		    overflow: hidden;
 }
 
-#box {
-    width: 100vw;
-    height: 100vh;
+#box{
+	width: 100vw;
+	height: 100vh;
 }
-
 #image1 {
-    width: 600px;
-    cursor: move;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -323px;
-    z-index: 0
+
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+  z-index: 0
 }
 
 #image2 {
-    width: 600px;
-    cursor: move;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -323px;
-    z-index: 0
-}
 
+	cursor: move;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+	height: 50%;
+	float: left;
+  position: absolute;
+
+  z-index: 0
+}
 #image3 {
-    width: 600px;
-    cursor: move;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -323px;
-    z-index: 0
-}
 
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -15.5% 0 0 -20.5%;
+  z-index: 0
+}
 #image4 {
-    width: 600px;
-    cursor: move;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -323px;
-    z-index: 0
-}
 
+	cursor: move;
+	height: 50%;
+	float: left;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+margin: -15.5% 0 0 -20.5%;
+  z-index: 0
+}
 .top {
     z-index: 2;
     position: relative

@@ -1,85 +1,85 @@
-
-.together{
-position: fixed;
-display: flex;
-flex-direction: row;
-	bottom: 0;
-	width: 100vw;
-	z-index: 99999999999;
-
-
-}
-
-
-
-#refrence-circle{
-		border-radius: 50%;
-		border: 3px solid red;
-	z-index: 9999999;
-	 pointer-events: none;
-	 background: none !important;
-position: relative;
-	 width: 50vh;
-	 height: 50vh;
+@font-face {font-family: "Ogg-Roman";
+  src: url("onlinewebfonts.eot"); /* IE9*/
+  src: url("onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */
+  url("onlinewebfonts.woff") format("woff"), /* chrome、firefox */
+  url("onlinewebfonts.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("onlinewebfonts.svg#Ogg-Roman") format("svg"); /* iOS 4.1- */
 }
 
 
 
 
-
-#circle-stepin-in{
-	z-index: 9999999;
-	 pointer-events: none;
-	 background: none !important;
+.together {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    z-index: 99999999999;
 }
+
+.type {
+	font-weight: lighter;
+    text-transform: uppercase;
+    line-height: .8;
+    padding-left: 10px;
+    width: 625px;
+    font-size: 5em;
+}
+
+.type2 {
+	font-family: "Ogg-Roman";
+    line-height: .8;
+    padding-left: 10px;
+    width: 625px;
+    font-size: 5em;
+}
+
+#refrence-circle {
+    border-radius: 50%;
+    border: 3px solid red;
+    z-index: 9999999;
+    pointer-events: none;
+    background: none !important;
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+}
+
+#circle-stepin-in {
+    z-index: 9999999;
+    pointer-events: none;
+    background: none !important;
+}
+
 #circle-stepin-in-link {
-	display: inline-block;
-	position: relative;
-	border: 3px solid white;
-	border-radius: 50%;
-	width: 100%;
-	height: auto;
-	z-index: 9999999;
-	transition: 0.2s all;
-	order: 1;
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: auto;
-	width: 50vh;
-	height: 50vh;
-
-	 pointer-events:all !important;
-
-
-}
-div#circle-stepin-in-link:hover{
-	 transition: background-color;
-	background-color: white;
-		transition: 0.2s all;
+    display: inline-block;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    z-index: 9999999;
+    transition: 0.2s all;
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 50vh;
+    height: 50vh;
+    pointer-events: all !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+div#circle-stepin-in-link:hover {
+    transition: background-color;
+    background-color: white;
+    transition: 0.2s all;
+}
 
 body {
     background: white;
-    height: 800px;
-    overflow: hidden;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .noselect {
@@ -98,58 +98,68 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-start;
+    overflow: hidden;
 }
 
-#box{
-	width: 100vw;
-	height: 100vh;
+#box {
+    width: 100vw;
+    height: 100vh;
 }
+
+#image {
+    cursor: move;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15.5% 0 0 -20.5%;
+    z-index: 0
+}
+
 #image1 {
-
-	cursor: move;
-	height: 50%;
-	float: left;
-  position: absolute;
-	top: 50%;
-	left: 50%;
-margin: -15.5% 0 0 -20.5%;
-  z-index: 0
+    cursor: move;
+    height: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15.5% 0 0 -20.5%;
+    z-index: 0
 }
 
 #image2 {
-
-	cursor: move;
-	top: 50%;
-	left: 50%;
-margin: -15.5% 0 0 -20.5%;
-	height: 50%;
-	float: left;
-  position: absolute;
-
-  z-index: 0
+    cursor: move;
+    top: 50%;
+    left: 50%;
+    margin: -15.5% 0 0 -20.5%;
+    height: 50%;
+    float: left;
+    position: absolute;
+    z-index: 0
 }
+
 #image3 {
-
-	cursor: move;
-	height: 50%;
-	float: left;
-  position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -15.5% 0 0 -20.5%;
-  z-index: 0
+    cursor: move;
+    height: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15.5% 0 0 -20.5%;
+    z-index: 0
 }
+
 #image4 {
-
-	cursor: move;
-	height: 50%;
-	float: left;
-  position: absolute;
-	top: 50%;
-	left: 50%;
-margin: -15.5% 0 0 -20.5%;
-  z-index: 0
+    cursor: move;
+    height: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15.5% 0 0 -20.5%;
+    z-index: 0
 }
+
 .top {
     z-index: 2;
     position: relative

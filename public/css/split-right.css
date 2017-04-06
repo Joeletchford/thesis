@@ -444,7 +444,7 @@ body{
 
 
 #myDIV {
-
+	cursor: s-resize;
 	font-weight: lighter;
 	z-index: 10;
 	padding: 10px;
@@ -461,6 +461,7 @@ body{
 	display: inline-block;
 }
 #myDIV2 {
+	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;
@@ -473,6 +474,7 @@ body{
 	color: black;
 }
 #myDIV3 {
+	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;
@@ -485,6 +487,7 @@ body{
 	color: black;
 }
 #myDIV4 {
+	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;

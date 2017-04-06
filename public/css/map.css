@@ -114,7 +114,7 @@ position: fixed;
 display: flex;
 flex-direction: row;
 	z-index: 99999999999;
-
+pointer-events: none !important;
 
 }
 
