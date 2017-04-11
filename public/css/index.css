@@ -83,9 +83,6 @@ legend {
 
 /* actual */
 
-html, body {
-    cursor: crosshair;
-}
 
 nav {
     z-index: 999999;
@@ -113,16 +110,6 @@ nav {
 .shown {
     display: block;
 }
-
-#curseur {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 150px;
-}
-
 
 /*
 div is this size of content
@@ -154,7 +141,6 @@ div is specific size
 }
 
 iframe {
-    cursor: crosshair;
     width: 100%;
     background-size: cover;
 }

@@ -16,6 +16,7 @@ body {
     background: black;
     overflow-y: hidden;
     overflow-x: hidden;
+
 }
 
 
@@ -235,7 +236,7 @@ div#circle-stepin-in-link:hover{
 .this {
 
 		cursor: none;
-    z-index: 0;
+
     position: absolute;
     left: 0px;
     top: -100px;
@@ -244,83 +245,97 @@ div#circle-stepin-in-link:hover{
 
 .this-1 {
 	cursor: none;
-    z-index: -1;
+
     position: absolute;
     left: 450px;
     top: 100px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-2 {
 	cursor: none;
-    z-index: -4;
+
     position: absolute;
     left: 20px;
     bottom: 280px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-3 {
 	cursor: none;
-    z-index: -1;
+
     position: absolute;
     left: 80px;
     top: 700px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-4 {
 	cursor: none;
-    z-index: -10;
+
     position: absolute;
     right: 800px;
     bottom: 100px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-5 {
 	cursor: none;
-    z-index: 6;
+
     position: absolute;
     right: -100px;
     bottom: -00px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-6 {
 	cursor: none;
-    z-index: -999;
+
     position: absolute;
     right: 250px;
     top: 650px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-7 {
 	cursor: none;
-    z-index: 6;
+
     position: absolute;
     right: 300px;
     top: 450px;
     height: 40%;
     filter: saturate(0);
+		pointer-events: all !important;
 }
 
 .this-8 {
 	cursor: none;
-    z-index: -2;
+
     position: absolute;
     right: 400px;
     top: 150px;
     height: 40%;
     ;
-    filter: saturate(0)
+    filter: saturate(0);
+		pointer-events: all !important;
+}
+
+#cursor{
+	width: 100vw;
+	height: 100vh;
+z-index: -999999999999;
 }
 
 

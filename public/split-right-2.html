@@ -31,7 +31,32 @@
 			titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
 			document.title = titleText;
 			setTimeout("titleMarquee()", 175);
-		}
+		};
+
+
+				$(document).ready(function(){
+				console.log($("#myDIV, #myDIV2, #myDIV3, #myDIV4").length)
+				$("#myDIV, #myDIV2, #myDIV3, #myDIV4").css('cursor','url(images/aarow-down.png) 39 22.5,auto');
+				});
+
+
+		$(document).ready(function(){
+		console.log($(".together, .left-clock,  .checkboxFour, .checkboxOne, .checkboxTwo, .checkboxThree").length)
+		$(".together, .left-clock,  .checkboxFour, .checkboxOne, .checkboxTwo, .checkboxThree").css('cursor','url(images/cursor.png) 9 9,auto');
+		});
+
+		$(document).ready(function(){
+		console.log($("a, .footnotes").length)
+		$("a, .footnotes").css('cursor','url(images/cursor-close.png) 9 9, auto');
+		});
+
+		$(document).ready(function(){
+		console.log($("label").length)
+		$("label").css('cursor','url(images/cursor-white.png) 9 9, auto');
+		});
+
+
+
 	</script>
 
 
@@ -54,14 +79,6 @@
 </head>
 <audio id="audio1" src="images/forest.mp3" autoplay loop></audio>
 <audio id="audio2" src="images/white.mp3" autoplay loop></audio>
-
-<style>
-
-	html,
-	body {
-		cursor: crosshair;
-	}
-</style>
 
 <body onload="titleMarquee()">
 

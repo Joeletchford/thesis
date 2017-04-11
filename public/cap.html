@@ -21,17 +21,25 @@
 
 			<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 
-			<style>
-				#map {
-					height: 100%;
-				}
-				html,
-				body {
-					height: 100%;
-					margin: 0;
-					padding: 0;
-				}
-			</style>
+			<script type="text/javascript">
+			$(document).ready(function(){
+			console.log($(".together").length)
+			$(".together").css('cursor','url(images/cursor.png) 9 9,auto');
+			});
+
+
+			$(document).ready(function(){
+			console.log($("a").length)
+			$("a").css('cursor','url(images/cursor-close.png) 9 9, auto');
+			});
+
+
+			</script>
+<style media="screen">
+#map {
+	height: 100%;
+}
+</style>
 
 </head>
 
@@ -79,14 +87,21 @@
 
 	<div id="map"></div>
 	<script>
+
 	var panorama;
 		function initialize() {
+			// var myOptions = {
+	    //     draggableCursor: 'url(images/cursor.png) 9 9,auto',
+	    //     draggingCursor: 'url(images/cursor.png) 9 9,auto'};
 
 			var places = [
 				{position: {
 						lat: 37.7300591,
 						lng: -119.6375416
-					},disableDefaultUI: true,},
+					},
+					disableDefaultUI: true,
+
+				},
 				{
 					position: {
 						lat: 42.7732289,
@@ -134,6 +149,7 @@
 					},
 					disableDefaultUI: true,
 
+
 				}
 
 			]
@@ -142,12 +158,15 @@
 			console.log(choosePlace);
 			console.log(places[choosePlace]);
 
+
 			// Note: constructed panorama objects have visible: true
 			// set by default.
 			 panorama = new google.maps.StreetViewPanorama(
 				document.getElementById('map'),places[choosePlace]);
 
-		}
+		};
+
+
 
 		// 	// Note: constructed panorama objects have visible: true
 		// 	// set by default.

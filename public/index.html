@@ -21,7 +21,7 @@
 
 			<script type="text/javascript">
 				$(function() {
-					var images = ['space.jpg', 'space-1.jpg', 'space-2.jpg', 'space-3.jpg', 'space-4.jpg', 'space-5.jpg', 'space-6.jpg', 'space-7.jpg'];
+					var images = ['space.jpg', 'space-1.jpg', 'new-river-3.jpg', 'space-7.jpg'];
 					$('#background').css({
 						'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'
 					});
@@ -29,6 +29,17 @@
 			</script>
 
 
+
+			<script type="text/javascript">
+			$(document).ready(function(){
+			console.log($(".dia-hold").length)
+			$(".dia-hold").css('cursor','url(images/cursor-close.png) 9 9,auto');
+			});
+			$(document).ready(function(){
+			console.log($("a").length)
+			$("a").css('cursor','url(images/cursor-close.png) 9 9, auto');
+			});
+			</script>
 
 
 

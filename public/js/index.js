@@ -138,6 +138,53 @@ var timer = setInterval(function(){
 
 
 
+//  dat second clock
+
+
+
+
+
+
+
+jQuery(document).ready(function( $ ) {
+
+  var images = new Array('images/layer1.png', 'images/layer2.png', 'images/layer3.png', 'images/layer4.png', 'images/layer5.png', 'images/layer6.png', 'images/layer7.png', 'images/layer8.png', 'images/layer9.png', 'images/layer10.png', 'images/layer11.png'
+);
+
+
+	var seconds = 0;
+	var minutes = 0;
+
+var timer = setInterval(function(){
+	//do somehting ever 1000ms = 1s
+	seconds++ // add one to the seconds
+	var randomImage = Math.floor(Math.random() * images.length + 1);
+	var randomImage2 = Math.floor(Math.random() * images.length + 1);
+	$('#sec1').attr('src', images[randomImage]);
+  $('#sec2').attr('src', images[randomImage2]);
+
+
+	if (seconds >= 60){ //if were at a minute
+		seconds = 0; // reset the counter to 0, start again.
+		//its been a minute
+		minutes++;
+		var randomImage3 = Math.floor(Math.random() * images.length + 1);
+		var randomImage4 = Math.floor(Math.random() * images.length + 1);
+		$('#min1').attr('src', images[randomImage3]);
+		$('#min2').attr('src', images[randomImage4]);
+	}
+
+	if(minutes >= 60){
+		//its been an hour
+		minutes = 0
+		var randomImage5 = Math.floor(Math.random() * images.length + 1);
+		var randomImage6 = Math.floor(Math.random() * images.length + 1);
+		$('#ho1').attr('src', images[randomImage5]);
+		$('#ho2').attr('src', images[randomImage6]);
+	}
+},1000)
+});
+
 
 
 

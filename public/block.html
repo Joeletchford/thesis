@@ -28,7 +28,24 @@
 			titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
 			document.title = titleText;
 			setTimeout("titleMarquee()", 175);
-		}
+		};
+
+		$(document).ready(function(){
+		console.log($("#type-addition, #type-addition-one,  #type-addition-two").length)
+		$("#type-addition, #type-addition-one, #type-addition-two").css('cursor','url(images/aarow-right.png) 22.5 39,auto');
+		});
+
+		$(document).ready(function(){
+		console.log($(".together").length)
+		$(".together").css('cursor','url(images/cursor.png) 9 9,auto');
+		});
+
+		$(document).ready(function(){
+		console.log($("a").length)
+		$("a").css('cursor','url(images/cursor-close.png) 9 9, auto');
+		});
+
+
 	</script>
 
 
@@ -40,18 +57,18 @@
 
 <body onload="titleMarquee()">
 
-	<div id="clock">
+	<div id="clock2">
 
 
 		<!-- <img id="hour0" src="images/0.png"/> -->
-		<img id="hour1" src="images/18.png" />
-		<img id="hour2" src="images/18.png" />
+		<img id="ho1" src="images/layer11.png" />
+		<img id="ho2" src="images/layer44.png" />
 
-		<img id="minute1" src="images/18.png" />
-		<img id="minute2" src="images/18.png" />
+		<img id="min1" src="images/layer10.png" />
+		<img id="min2" src="images/layer55.png" />
 
-		<img id="second1" src="images/18.png" />
-		<img id="second2" src="images/18.png" />
+		<img id="sec" src="images/layer66.png" />
+		<img id="sec2" src="images/layer-2.png" />
 
 		<!-- <img id="mili1"/>
 		<img id="mili2"/> -->
@@ -83,7 +100,8 @@
 
 
 		<div id="type-addition">
-			<span style="cursor:e-resize">
+			<span >
+				<!-- style="cursor:e-resize" -->
 
 							 As I open my eyes
 			<br><br> roll over
@@ -103,7 +121,8 @@
 		<!-- &#10141; -->
 
 		<div id="type-addition-one">
-<span style="cursor:e-resize">
+<span >
+	<!-- style="cursor:e-resize" -->
 					I spend the first thirty minutes of my morning
 					<br><br> hastily skimming through all my major social medias
 					<br><br> <span class="cap" id="ital"> did I miss anything </span>
@@ -123,7 +142,8 @@
 
 
 		<div id="type-addition-two">
-<span style="cursor:e-resize">
+<span >
+	<!--  style="cursor:e-resize"-->
 				<span class="cap" id="ital">this is okay </span>
 				<br><br> <span id="ital">at least I’m learning useful information about what's important to me </span>
 
@@ -139,7 +159,7 @@
 				<br><br> I am rubbing my thumbs around on my phone
 
 				 <br><br> staring into the soul of whatever media platform until I decide that sleep is necessary
-</span> 
+</span>
 		</div>
 
 	</div>

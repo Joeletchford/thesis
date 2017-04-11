@@ -20,7 +20,21 @@
 
 			<!-- <script type="text/javascript" charset="utf-8" src="js/nav-right.js"></script> -->
 
-
+			<script type="text/javascript">
+			$(document).ready(function(){
+			console.log($(".together").length)
+			$(".together").css('cursor','url(images/cursor-white-empty.png) 9 9,auto');
+			});
+					$(document).ready(function(){
+					$("a").css('cursor','url(images/cursor-close.png) 9 9, auto');
+					});
+					$(document).ready(function(){
+					$(".outershell").css('cursor','url(images/cursor-white-empty.png) 9 9, auto');
+					});
+					$(document).ready(function(){
+					$("#image1, #image2, #image3, #image4").css('cursor','url(images/aarow-move.png) 22 22, auto');
+					});
+			</script>
 
 </head>
 <audio id="audio1" src="images/forest.mp3" autoplay loop></audio>
@@ -61,7 +75,7 @@
 				<img id="image3" src="images/7.png" ></img>
 				 <img id="image4" src="images/8.png" ></img>
 				 <img id="image1" src="images/9.png" > </img>
-				 <img id="image2" src="images10.png" ></img>
+				 <img id="image2" src="images/10.png" ></img>
 					<img id="image3" src="images/11.png" ></img>
 					 <img id="image4" src="images/12.png" ></img>
 					 <img id="image1" src="images/13.png" > </img>

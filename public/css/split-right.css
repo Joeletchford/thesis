@@ -158,8 +158,6 @@ input[type=checkbox] {
 	visibility: hidden;
 }
 .checkboxOne{
-	width: 40px;
-	height: 40px;
 	margin: 5px 5px;
 
 	border-radius: 100%;
@@ -175,7 +173,6 @@ input[type=checkbox] {
 	border-radius: 100px;
   border: 2px solid black;
 	transition: all .1s ease;
-	cursor: pointer;
 	position: absolute;
 
 	z-index: 1;
@@ -188,8 +185,6 @@ input[type=checkbox] {
 /*two*/
 
 .checkboxTwo{
-	width: 40px;
-	height: 40px;
 	margin: 60px 5px;
 
 	border-radius: 100%;
@@ -205,7 +200,6 @@ input[type=checkbox] {
 	border-radius: 100px;
   border: 2px solid black;
 	transition: all .1s ease;
-	cursor: pointer;
 	position: absolute;
 
 	z-index: 1;
@@ -219,8 +213,7 @@ input[type=checkbox] {
 
 
 .checkboxThree{
-	width: 40px;
-	height: 40px;
+
 	margin: 110px 5px;
 
 	border-radius: 100%;
@@ -236,7 +229,6 @@ input[type=checkbox] {
 	border-radius: 100px;
   border: 2px solid black;
 	transition: all .1s ease;
-	cursor: pointer;
 	position: absolute;
 
 	z-index: 1;
@@ -249,8 +241,7 @@ input[type=checkbox] {
 /*four*/
 
 .checkboxFour{
-	width: 40px;
-	height: 40px;
+
 	margin: 165px 5px;
 
 	border-radius: 100%;
@@ -266,7 +257,6 @@ input[type=checkbox] {
 	border-radius: 100px;
   border: 2px solid black;
 	transition: all .1s ease;
-	cursor: pointer;
 	position: absolute;
 
 	z-index: 1;
@@ -444,7 +434,6 @@ body{
 
 
 #myDIV {
-	cursor: s-resize;
 	font-weight: lighter;
 	z-index: 10;
 	padding: 10px;
@@ -461,7 +450,6 @@ body{
 	display: inline-block;
 }
 #myDIV2 {
-	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;
@@ -474,7 +462,6 @@ body{
 	color: black;
 }
 #myDIV3 {
-	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;
@@ -487,7 +474,6 @@ body{
 	color: black;
 }
 #myDIV4 {
-	cursor: s-resize;
 	position: absolute;
 
 		font-weight: lighter;
