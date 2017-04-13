@@ -22,24 +22,22 @@
 			<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 
 			<script type="text/javascript">
-			$(document).ready(function(){
-			console.log($(".together").length)
-			$(".together").css('cursor','url(images/cursor.png) 9 9,auto');
-			});
+				$(document).ready(function() {
+					console.log($(".together, div").length)
+					$(".together, div").css('cursor', 'url(images/cursor.png) 9 9,auto');
+				});
 
 
-			$(document).ready(function(){
-			console.log($("a").length)
-			$("a").css('cursor','url(images/cursor-close.png) 9 9, auto');
-			});
-
-
+				$(document).ready(function() {
+					console.log($("a").length)
+					$("a").css('cursor', 'url(images/cursor-close.png) 9 9, auto');
+				});
 			</script>
-<style media="screen">
-#map {
-	height: 100%;
-}
-</style>
+			<style media="screen">
+				#map {
+					height: 100%;
+				}
+			</style>
 
 </head>
 
@@ -49,53 +47,54 @@
 
 <body>
 
-<div class="together">
+	<div class="together">
 
-
-	<div id="refrence-circle">
+		<div id="refrence-circle">
+		</div>
+		<div id="circle-stepin-in">
+			<a href="index.html" target="_parent">
+				<div id="circle-stepin-in-link">
+				</div>
+			</a>
+		</div>
 	</div>
-			<div id="circle-stepin-in">
-				<a href="index.html" target="_parent">
-					<div id="circle-stepin-in-link">
-					</div>
-				</a>
-			</div>
-</div>
 
-<div class="flex">
+	<div class="flex">
 
 
-	<div class="map-type-left second-phrase">Our <span id="type-italic">[western]</span>
+		<div class="map-type-left second-phrase">Our <span id="type-italic">[western]</span>
 		</div>
 
 		<div class="map-type-left second-phrase-2"> society has taught us
-			</div>
+		</div>
 
-	<div class="map-type-left second-phrase-3">to understand that knowing is
+		<div class="map-type-left second-phrase-3">to understand that knowing is
+		</div>
+
+		<div class="map-type-left second-phrase-4">the only way to be viewed as having knowledge.
+		</div>
+
+		<div class="map-type-left second-phrase-5">Not-knowing is viewed as having less knowledge
+		</div>
+
+		<div class="map-type-left second-phrase-6">therefor less in the eyes of society.
+		</div>
+
 	</div>
-
-	<div class="map-type-left second-phrase-4">the only way to be viewed as having knowledge.
-	</div>
-
-	<div class="map-type-left second-phrase-5">Not-knowing is viewed as having less knowledge
-	</div>
-
-	<div class="map-type-left second-phrase-6">therefor less in the eyes of society.
-	</div>
-
-</div>
 
 	<div id="map"></div>
 	<script>
+		var panorama;
 
-	var panorama;
 		function initialize() {
-			// var myOptions = {
-	    //     draggableCursor: 'url(images/cursor.png) 9 9,auto',
-	    //     draggingCursor: 'url(images/cursor.png) 9 9,auto'};
 
-			var places = [
-				{position: {
+
+			// var myOptions = {
+			//     draggableCursor: 'url(images/cursor.png) 9 9,auto',
+			//     draggingCursor: 'url(images/cursor.png) 9 9,auto'};
+
+			var places = [{
+					position: {
 						lat: 37.7300591,
 						lng: -119.6375416
 					},
@@ -158,11 +157,17 @@
 			console.log(choosePlace);
 			console.log(places[choosePlace]);
 
-
+			var options = {
+				disableDefaultUI: false,
+				navigationControl: true,
+				keyboardShortcuts: false,
+				disableDoubleClickZoom: true,
+				streetViewControl: true,
+			}
 			// Note: constructed panorama objects have visible: true
 			// set by default.
-			 panorama = new google.maps.StreetViewPanorama(
-				document.getElementById('map'),places[choosePlace]);
+			panorama = new google.maps.StreetViewPanorama(
+				document.getElementById('map'), places[choosePlace], options);
 
 		};
 

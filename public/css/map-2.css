@@ -91,12 +91,13 @@ pointer-events: none;
 
 
 .together{
+	bottom: 50px;
 position: fixed;
 display: flex;
 flex-direction: row;
 float:right;
 	right: 0;
-	bottom: 0;
+
 
 	z-index: 99999999999;
 pointer-events: none !important;
@@ -112,8 +113,8 @@ pointer-events: none !important;
 	 pointer-events: none;
 	 background: none !important;
 position: relative;
-	 width: 50vh;
-	 height: 50vh;
+width: 25vw;
+height: 25vw;
 }
 
 
@@ -138,8 +139,8 @@ position: relative;
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: auto;
-	width: 50vh;
-	height: 50vh;
+	width: 25vw;
+	height: 25vw;
 
 	 pointer-events:all !important;
 

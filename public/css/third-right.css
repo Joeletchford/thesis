@@ -169,7 +169,7 @@ img:hover+p {
 position: fixed;
 display: flex;
 flex-direction: row;
-	bottom: 0;
+	bottom: 50px;
 	z-index: 99999999999;
 
 
@@ -184,8 +184,8 @@ flex-direction: row;
 	 pointer-events: none;
 	 background: none !important;
 position: relative;
-	 width: 50vh;
-	 height: 50vh;
+width: 25vw;
+height: 25vw;
 }
 
 
@@ -210,9 +210,8 @@ position: relative;
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: auto;
-	width: 50vh;
-	height: 50vh;
-
+	width: 25vw;
+	height: 25vw;
 	 pointer-events:all !important;
 
 

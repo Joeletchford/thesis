@@ -434,16 +434,19 @@ div#circle-stepin-in-link:hover {
 
 
 /*diagram page */
-
 .dia-hold {
+	margin-top: 50px;
 display: flex;
 flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+
 
 }
 
 .parent {
 	width: 100%;
-	height:auto;
     display: flex;
     flex-direction:row;
     justify-content: center;
@@ -458,13 +461,8 @@ flex-wrap: wrap;
 		height: auto;
     z-index: 9999999;
     transition: 0.2s all;
-
-    order: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-		width: 50vh;
- height: 50vh;
+		width: 25vw;
+ height: 25vw;
 }
 
 div.one:hover {
@@ -481,12 +479,9 @@ transition: 0.2s all;
 
     z-index: 9999999;
     transition: 0.2s all;
-    order: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-		width: 50vh;
- height: 50vh;
+
+		width: 25vw;
+	height: 25vw;
 }
 
 div.second:hover {
@@ -503,12 +498,9 @@ div.second:hover {
 
     z-index: 9999999;
     transition: 0.2s all;
-    order: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-		width: 50vh;
- height: 50vh;
+
+		width: 25vw;
+	height: 25vw;
 }
 
 div.third:hover {
@@ -525,12 +517,9 @@ div.third:hover {
 
     z-index: 9999999;
     transition: 0.2s all;
-    order: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-		width: 50vh;
- height: 50vh;
+
+		width: 25vw;
+	height: 25vw;
 }
 
 div.fourth:hover {
@@ -538,6 +527,7 @@ div.fourth:hover {
 	background-color: black;
 	transition: 0.2s all;
 }
+
 
 
 /**/

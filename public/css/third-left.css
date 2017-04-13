@@ -21,10 +21,12 @@ body {
 
 
 .together{
+	position: fixed;
 display: flex;
 flex-direction: row;
 float:right;
 	right: 0;
+	top:50px;
 	z-index: 99999999999;
 
 
@@ -40,8 +42,8 @@ float:right;
 	 pointer-events: none;
 	 background: none !important;
 position: relative;
-	 width: 50vh;
-	 height: 50vh;
+width: 25vw;
+height: 25vw;
 }
 
 
@@ -61,13 +63,9 @@ position: relative;
 	width: 100%;
 	height: auto;
 	z-index: 9999999;
-	transition: 0.2s all;
-	order: 1;
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: auto;
-	width: 50vh;
-	height: 50vh;
+
+	width: 25vw;
+	height: 25vw;
 
 	 pointer-events:all !important;
 
@@ -238,7 +236,7 @@ div#circle-stepin-in-link:hover{
 		cursor: none;
 
     position: absolute;
-    left: 0px;
+    left: -30px;
     top: -100px;
     height: 35%;
 }
@@ -247,8 +245,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    left: 450px;
-    top: 100px;
+    left: -300px;
+    top: 300px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -258,8 +256,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    left: 20px;
-    bottom: 280px;
+    left: -100px;
+    top: 600px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -269,8 +267,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    left: 80px;
-    top: 700px;
+    left: 360px;
+    top: 60px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -280,7 +278,7 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    right: 800px;
+  left: 300px;
     bottom: 100px;
     height: 40%;
     filter: saturate(0);
@@ -291,8 +289,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    right: -100px;
-    bottom: -00px;
+    left: 550px;
+    bottom: 0px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -302,8 +300,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    right: 250px;
-    top: 650px;
+    left: 750px;
+    top: 250px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -313,8 +311,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    right: 300px;
-    top: 450px;
+    left: 900px;
+    bottom: -100px;
     height: 40%;
     filter: saturate(0);
 		pointer-events: all !important;
@@ -324,8 +322,8 @@ div#circle-stepin-in-link:hover{
 	cursor: none;
 
     position: absolute;
-    right: 400px;
-    top: 150px;
+    right: 20px;
+    bottom: 150px;
     height: 40%;
     ;
     filter: saturate(0);
