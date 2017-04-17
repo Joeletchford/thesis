@@ -148,7 +148,7 @@ var timer = setInterval(function(){
 
 jQuery(document).ready(function( $ ) {
 
-  var images = new Array('images/layer1.png', 'images/layer2.png', 'images/layer3.png', 'images/layer4.png', 'images/layer5.png', 'images/layer6.png', 'images/layer7.png', 'images/layer8.png', 'images/layer9.png', 'images/layer10.png', 'images/layer11.png'
+  var images = new Array('images/layer1.png', 'images/layer2.png', 'images/layer3.png', 'images/layer10.png', 'images/layer11.png', 'images/layer44.png', 'images/layer55.png', 'images/layer66.png', 'images/extra-layers.png'
 );
 
 

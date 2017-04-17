@@ -94,7 +94,7 @@ float:right;
 
 	z-index: 99999999999;
 
-
+pointer-events: none !important;
 }
 
 

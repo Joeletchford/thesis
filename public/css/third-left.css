@@ -28,7 +28,7 @@ float:right;
 	right: 0;
 	top:50px;
 	z-index: 99999999999;
-
+pointer-events: none !important;
 
 
 }
