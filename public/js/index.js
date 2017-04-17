@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
   socket.on('connect', function(data) { // when connected, do something
-    console.log("connected to the server" + socket.id); // log out out id
+    //console.log("connected to the server" + socket.id); // log out out id
   })
  // var sd1 = $("#audio1")[0];
  //  var sd2 = $("#audio2")[0];
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
   socket.on('amountToDistort', function(distortionAmount) {
 
-    console.log(distortionAmount)
+    //console.log(distortionAmount)
 
     if (distortionAmount > 0) {
 

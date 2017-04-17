@@ -11,7 +11,6 @@
 			<meta name="author" content="">
 			<meta name="description" content="">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="/css/tachyons.css">
 			<link rel="stylesheet" href="/css/index.css" media="screen" title="no title">
 			<link rel="stylesheet" href="/css/map.css" media="screen" title="no title">
 			<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
@@ -88,11 +87,6 @@
 
 		function initialize() {
 
-
-			// var myOptions = {
-			//     draggableCursor: 'url(images/cursor.png) 9 9,auto',
-			//     draggingCursor: 'url(images/cursor.png) 9 9,auto'};
-
 			var places = [{
 					position: {
 						lat: 37.7300591,
@@ -164,34 +158,15 @@
 				disableDoubleClickZoom: true,
 				streetViewControl: true,
 			}
-			// Note: constructed panorama objects have visible: true
-			// set by default.
+
 			panorama = new google.maps.StreetViewPanorama(
 				document.getElementById('map'), places[choosePlace], options);
 
 		};
 
-
-
-		// 	// Note: constructed panorama objects have visible: true
-		// 	// set by default.
-		// 	var panorama = new google.maps.StreetViewPanorama(
-		// 		document.getElementById('map'), {
-		// 			position: {
-		// 				lat: 37.7300591,
-		// 				lng: -119.6375416
-		// 			},
-		// 			disableDefaultUI: true,
-		//
-		// 		});
-		// }
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrQch1jiKcq6FahZOCnWZnPeSw4Akac6Y&callback=initialize">
 	</script>
-
-
-	<!-- AIzaSyDYsMASUe2zdAwpHS2wsb90GPycvCVYOHE -->
-
 
 
 </body>
@@ -208,8 +183,6 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="/js/mobAudio.js" charset="utf-8"></script>
-<script src="/js/mobileDrag.js" charset="utf-8"></script>
 <script src="/js/index.js" charset="utf-8"></script>
 
 </html>

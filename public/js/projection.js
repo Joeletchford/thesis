@@ -5,13 +5,13 @@ var socket = io.connect() // connect to the server
 var vid = document.getElementById("bgvid");
 
 socket.on('connect', function(data) { // when we are connected do something.
-  console.log("connected to the server" + socket.id);
+//  console.log("connected to the server" + socket.id);
   // log out our socket's id, some long garbled number letter tcching that is unique!
 })
 
 socket.on('amountToDistort', function(distortionAmount) {
   // if we see a projectionRectangle message then do some stuff
-  console.log(distortionAmount) //see the coordinates come down.
+  //console.log(distortionAmount) //see the coordinates come down.
 
   if (distortionAmount > 1) {
     // what im working with now
@@ -23,7 +23,7 @@ socket.on('amountToDistort', function(distortionAmount) {
 
 socket.on('amountToDistort', function(distortionAmount) {
   // if we see a projectionRectangle message then do some stuff
-  console.log(distortionAmount) //see the coordinates come down.
+  //console.log(distortionAmount) //see the coordinates come down.
 
   if (distortionAmount > 0) {
     var sound1 = document.getElementById("audio1");

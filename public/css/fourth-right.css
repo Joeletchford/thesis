@@ -19,6 +19,7 @@
 }
 
 .type {
+	font-family: helvetica;
 	font-weight: lighter;
     text-transform: uppercase;
     line-height: .8;

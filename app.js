@@ -28,7 +28,7 @@ app.use(express.static('public')); //load out anything in the 'public' folder
 var distortionAmount = 0
 
 io.on('connection', function(socket) { // if socket.io sees a new connection, do something with them...
-  console.log(socket.id)
+  //console.log(socket.id)
 
   socket.on('distortMore', function(data) {
 
@@ -39,7 +39,7 @@ io.on('connection', function(socket) { // if socket.io sees a new connection, do
     }
 
     io.emit('amountToDistort', distortionAmount);
-    console.log('more', distortionAmount);
+    //console.log('more', distortionAmount);
 
     distortLess();
   });
@@ -50,9 +50,9 @@ function distortLess() {
     if (distortionAmount > 0) {
       distortionAmount = distortionAmount - 1
       io.emit('amountToDistort', distortionAmount);
-      console.log('less', distortionAmount);
+      //console.log('less', distortionAmount);
     } else {
-      console.log('🐈 Interval cleared!')
+    //PP  console.log('🐈 Interval cleared!')
       clearInterval(interval);
     }
   },600);
