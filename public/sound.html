@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>
+		EFF
+		<=LESS </title>
+			<meta name="author" content="">
+			<meta name="description" content="">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="/css/index.css" media="screen" title="no title">
+			<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+			<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.0-beta13/howler.min.js"></script>
+			<!-- <script type="text/javascript" charset="utf-8" src="js/nav-right.js"></script> -->
+
+
+<script type="text/javascript">
+socket.on('amountToDistort', function(distortionAmount) {
+	// if we see a projectionRectangle message then do some stuff
+	//console.log(distortionAmount) //see the coordinates come down.
+
+	if (distortionAmount > 0) {
+		var sound1 = document.getElementById("audio1");
+		var sound2 = document.getElementById("audio2");
+		var s1vol = map(distortionAmount, 0, 1200, 0.0, 1.0)
+		var s2vol = map(distortionAmount, 0, 1200, 1.0, 0.0)
+		sound1.volume = s1vol;
+		sound2.volume = s2vol;
+	};
+})
+</script>
+
+
+
+</head>
+
+
+
+
+
+
+<audio id="audio1" src="images/forest.mp3" autoplay preload loop></audio>
+<audio id="audio2" src="images/white.mp3" autoplay preload loop></audio>
+
+<body>
+
+</body>
+
+
+
+
+
+<!-- the end -->
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<!-- <script src="/js/howler.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="/js/index.js" charset="utf-8"></script>
+
+</html>
